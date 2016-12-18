@@ -1,0 +1,9 @@
+{
+    "apps": [{
+        "root": "client/imports/app",
+        "prefix": "app"
+    }],
+    "defaults": {
+        "styleExt": "scss"
+    }
+}

@@ -3,12 +3,18 @@ import { BrowserModule } from "@angular/platform-browser";
 import { AppComponent } from "./app.component";
 import { DemoComponent } from "./demo/demo.component";
 import { DemoDataService } from "./demo/demo-data.service";
+import { FooterComponent } from './footer/footer.component';
+import { ContentComponent } from './content/content.component';
+import { NavibarComponent } from './navibar/navibar.component';
 
 @NgModule({
   // Components, Pipes, Directive
   declarations: [
     AppComponent,
-    DemoComponent
+    DemoComponent,
+    FooterComponent,
+    ContentComponent,
+    NavibarComponent
   ],
   // Entry Components
   entryComponents: [
@@ -23,7 +29,7 @@ import { DemoDataService } from "./demo/demo-data.service";
     BrowserModule
   ],
   // Main Component
-  bootstrap: [ AppComponent ]
+  bootstrap: [AppComponent]
 })
 export class AppModule {
   constructor() {
