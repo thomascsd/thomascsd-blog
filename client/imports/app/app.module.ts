@@ -1,28 +1,31 @@
 import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { AppComponent } from "./app.component";
-import { DemoComponent } from "./demo/demo.component";
-import { DemoDataService } from "./demo/demo-data.service";
 import { FooterComponent } from './footer/footer.component';
 import { ContentComponent } from './content/content.component';
-import { NavibarComponent } from './navibar/navibar.component';
+import { AboutComponent } from './about/about.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { PostComponent } from './post/post.component';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   // Components, Pipes, Directive
   declarations: [
     AppComponent,
-    DemoComponent,
     FooterComponent,
     ContentComponent,
-    NavibarComponent
-  ],
+    AboutComponent,
+    NavbarComponent,
+    PostComponent,
+    AdminComponent
+],
   // Entry Components
   entryComponents: [
     AppComponent
   ],
   // Providers
   providers: [
-    DemoDataService
+    
   ],
   // Modules
   imports: [
