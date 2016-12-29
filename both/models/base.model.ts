@@ -1,3 +1,3 @@
 export interface BaseModel {
-    _id: any
+    _id?: any
 }

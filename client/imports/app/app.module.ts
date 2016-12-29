@@ -1,6 +1,8 @@
 import { NgModule } from "@angular/core";
 import { RouterModule } from '@angular/router';
 import { BrowserModule } from "@angular/platform-browser";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TabsModule } from 'ng2-bootstrap/tabs';
 import { AppComponent } from "./app.component";
 import { FooterComponent } from './footer/footer.component';
 import { ContentComponent } from './content/content.component';
@@ -32,6 +34,9 @@ import { routes } from './app.routes';
   // Modules
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    TabsModule.forRoot(),
     RouterModule.forRoot(routes)
   ],
   // Main Component
