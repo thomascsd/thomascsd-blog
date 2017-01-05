@@ -7,9 +7,12 @@ import template from './Login.component.html';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor() { 
+    
+  }
 
   ngOnInit() {
+    
   }
 
 }

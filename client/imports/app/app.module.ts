@@ -3,7 +3,7 @@ import { RouterModule } from '@angular/router';
 import { BrowserModule } from "@angular/platform-browser";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TabsModule } from 'ng2-bootstrap/tabs';
-import { AccountsModule} from 'angular2-meteor-accounts-ui';
+import { AccountsModule } from 'angular2-meteor-accounts-ui';
 import { AppComponent } from "./app.component";
 import { FooterComponent } from './footer/footer.component';
 import { ContentComponent } from './content/content.component';
@@ -13,6 +13,7 @@ import { PostComponent } from './post/post.component';
 import { AdminComponent } from './admin/admin.component';
 import { routes } from './app.routes';
 import { LoginComponent } from './Login/Login.component';
+import { LoggedInGuardService } from './services/LoggedInGuard.service';
 
 @NgModule({
   // Components, Pipes, Directive
@@ -25,14 +26,14 @@ import { LoginComponent } from './Login/Login.component';
     PostComponent,
     AdminComponent,
     LoginComponent
-],
+  ],
   // Entry Components
   entryComponents: [
     AppComponent
   ],
   // Providers
   providers: [
-
+    LoggedInGuardService
   ],
   // Modules
   imports: [

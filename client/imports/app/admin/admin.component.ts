@@ -25,7 +25,7 @@ export class AdminComponent implements OnInit {
 
   saveData() {
     if (this.postForm.valid) {
-      const data: Post = this.postForm.value as Post;
+      const data = this.postForm.value as Post;
 
       Posts.insert({
         title: data.title,
