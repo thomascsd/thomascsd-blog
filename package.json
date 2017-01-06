@@ -2,7 +2,7 @@
   "name": "thomascsd-blog",
   "private": true,
   "scripts": {
-    "start": "meteor run",
+    "start": "meteor run --settings settings.json",
     "start:prod": "meteor run --production",
     "build": "meteor build ./build/",
     "clear": "meteor reset",
@@ -27,6 +27,7 @@
     "@angular/platform-browser": "2.4.1",
     "@angular/platform-browser-dynamic": "2.4.1",
     "@angular/router": "3.4.1",
+    "@types/underscore": "^1.7.36",
     "angular2-meteor": "0.7.1",
     "angular2-meteor-accounts-ui": "^1.0.0",
     "angular2-meteor-polyfills": "0.1.1",
