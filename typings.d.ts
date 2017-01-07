@@ -1,5 +1,5 @@
 /// <reference types="zone.js" />
-/// <reference types="@types/meteor" />
+/// <reference types="meteor-typings" />
 /// <reference types="@types/underscore" />
 /// <reference types="@types/chai" />
 /// <reference types="@types/mocha" />
@@ -126,4 +126,8 @@ declare namespace Chai {
     called: SpyCalled;
     always: SpyCalledAlways;
   }
+}
+
+interface jQuery {
+  markdown(options?: any): jQuery
 }

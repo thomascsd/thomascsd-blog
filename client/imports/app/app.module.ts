@@ -26,7 +26,7 @@ import { LoggedInGuardService } from './services/LoggedInGuard.service';
     PostComponent,
     AdminComponent,
     LoginComponent
-  ],
+],
   // Entry Components
   entryComponents: [
     AppComponent
