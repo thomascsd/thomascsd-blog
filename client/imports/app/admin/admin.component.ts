@@ -1,8 +1,9 @@
 import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
-import template from './admin.component.html';
+import { MeteorObservable } from 'meteor-rxjs';
 import { Post } from '../../../../both/models/post.model';
 import { Posts } from '../../../../both/collections/post.collections';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import template from './admin.component.html';
 declare const $: jQuery;
 
 @Component({
@@ -36,12 +37,11 @@ export class AdminComponent implements OnInit, AfterViewInit {
     if (this.postForm.valid) {
       const data = this.postForm.value as Post;
 
-      Posts.insert({
-        title: data.title,
-        content: data.content,
-        tag: data.tag,
-        createdAt: new Date()
-      });
+      MeteorObservable
+        .call<Post>('insertPost', data)
+        .subscribe(() => {
+          alert('save successly');
+        });
 
     }
 
