@@ -10,13 +10,17 @@ import { Observable } from 'rxjs';
   template
 })
 export class PostComponent implements OnInit {
-  posts: Observable<Post[]>;
+  posts: Post[];
 
   constructor() { }
 
   ngOnInit() {
     MeteorObservable.subscribe('posts').subscribe();
-    this.posts = Posts.find({}).zone();
+    Posts.find({})
+      .zone()
+      .subscribe((datas: Post[]) => {
+        this.posts = datas;
+      });
 
   }
 
