@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import template from './post.component.html';
+import template from './postlist.component.html';
 import { MeteorObservable } from 'meteor-rxjs';
 import { Posts } from './../../../../both/collections/post.collections';
 import { Post } from './../../../../both/models/post.model';
 import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'app-post',
+  selector: 'app-postlist',
   template
 })
-export class PostComponent implements OnInit {
+export class PostlistComponent implements OnInit {
   posts: Post[];
 
   constructor() { }
@@ -21,7 +21,6 @@ export class PostComponent implements OnInit {
       .subscribe((datas: Post[]) => {
         this.posts = datas;
       });
-
   }
 
 }
