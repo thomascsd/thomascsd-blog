@@ -15,6 +15,7 @@ import { routes } from './app.routes';
 import { LoginComponent } from './Login/Login.component';
 import { LoggedInGuardService } from './services/LoggedInGuard.service';
 import { PostlistComponent } from './postlist/postlist.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   // Components, Pipes, Directive
@@ -27,7 +28,8 @@ import { PostlistComponent } from './postlist/postlist.component';
     PostComponent,
     AdminComponent,
     LoginComponent,
-    PostlistComponent
+    PostlistComponent,
+    HeaderComponent
 ],
   // Entry Components
   entryComponents: [
