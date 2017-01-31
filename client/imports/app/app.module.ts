@@ -16,6 +16,8 @@ import { LoginComponent } from './Login/Login.component';
 import { LoggedInGuardService } from './services/LoggedInGuard.service';
 import { PostlistComponent } from './postlist/postlist.component';
 import { HeaderComponent } from './header/header.component';
+import { MarkdownPipe } from './markdown/markdown.pipe';
+import { ReadMorePipe } from './readMore/read-more.pipe';
 
 @NgModule({
   // Components, Pipes, Directive
@@ -27,9 +29,13 @@ import { HeaderComponent } from './header/header.component';
     NavbarComponent,
     PostComponent,
     AdminComponent,
-    LoginComponent,
+    LoginComponent,
     PostlistComponent,
-    HeaderComponent
+    HeaderComponent,
+,
+    Markdown.pipePipe,
+    MarkdownPipe,
+    ReadMorePipe
 ],
   // Entry Components
   entryComponents: [

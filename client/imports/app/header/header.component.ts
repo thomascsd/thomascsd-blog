@@ -15,9 +15,12 @@ export class HeaderComponent implements OnInit {
   @Input()
   subheading: string = '';
 
+  bgImage: string;
+
   constructor() { }
 
   ngOnInit() {
+    this.bgImage=`url(${this.bgUrl})`;
   }
 
 }
