@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute, Params } from '@angular/router';
 import template from './post.component.html';
 import { MeteorObservable } from 'meteor-rxjs';
 import { Posts } from './../../../../both/collections/post.collections';
@@ -10,16 +11,16 @@ import { Observable } from 'rxjs';
   template
 })
 export class PostComponent implements OnInit {
-  posts: Post[];
+  post: Post;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
     MeteorObservable.subscribe('posts').subscribe();
-    Posts.find({})
-      .zone()
-      .subscribe((datas: Post[]) => {
-        this.posts = datas;
+
+    this.route.params
+      .subscribe((params: Params) => {
+        this.post = Posts.findOne({ '_id': params['id'] });
       });
 
   }

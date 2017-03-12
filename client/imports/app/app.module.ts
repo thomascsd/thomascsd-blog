@@ -1,9 +1,7 @@
 import { NgModule } from "@angular/core";
-import { RouterModule } from '@angular/router';
 import { BrowserModule } from "@angular/platform-browser";
+import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { TabsModule } from 'ng2-bootstrap/tabs';
-import { AccountsModule } from 'angular2-meteor-accounts-ui';
 import { AppComponent } from "./app.component";
 import { FooterComponent } from './footer/footer.component';
 import { ContentComponent } from './content/content.component';
@@ -11,13 +9,12 @@ import { AboutComponent } from './about/about.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PostComponent } from './post/post.component';
 import { AdminComponent } from './admin/admin.component';
-import { routes } from './app.routes';
-import { LoginComponent } from './Login/Login.component';
-import { LoggedInGuardService } from './services/LoggedInGuard.service';
 import { PostlistComponent } from './postlist/postlist.component';
 import { HeaderComponent } from './header/header.component';
-import { MarkdownPipe } from './markdown/markdown.pipe';
-import { ReadMorePipe } from './readMore/read-more.pipe';
+import { LoginComponent } from './Login/Login.component';
+import { routes } from './app.routes';
+import { LoggedInGuardService } from './services/LoggedInGuard.service';
+
 
 @NgModule({
   // Components, Pipes, Directive
@@ -32,11 +29,7 @@ import { ReadMorePipe } from './readMore/read-more.pipe';
     LoginComponent,
     PostlistComponent,
     HeaderComponent,
-,
-    Markdown.pipePipe,
-    MarkdownPipe,
-    ReadMorePipe
-],
+  ],
   // Entry Components
   entryComponents: [
     AppComponent
@@ -50,8 +43,6 @@ import { ReadMorePipe } from './readMore/read-more.pipe';
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    AccountsModule,
-    TabsModule.forRoot(),
     RouterModule.forRoot(routes)
   ],
   // Main Component

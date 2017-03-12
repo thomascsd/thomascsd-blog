@@ -1,5 +1,5 @@
 <div class="post-preview" *ngFor="let po of posts">
-  <a href="post.html">
+  <a [routerLink]="['post', po._id]">
     <h2 class="post-title">
       {{po.title}}
     </h2>

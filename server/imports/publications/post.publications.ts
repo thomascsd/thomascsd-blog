@@ -7,7 +7,3 @@ Meteor.publish('posts', () => {
         sort: { createdAt: -1 }
     });
 });
-
-Meteor.publish('post', (id: any) => {
-    return Posts.findOne({ _id: id });
-});

@@ -3,8 +3,9 @@ import { MeteorObservable } from 'meteor-rxjs';
 import { Post } from '../../../../both/models/post.model';
 import { Posts } from '../../../../both/collections/post.collections';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import * as $ from 'jquery';
 import template from './admin.component.html';
-declare const $: jQuery;
+import '../../assets/js/bootstrap-markdown.min.js';
 
 @Component({
   selector: 'app-admin',

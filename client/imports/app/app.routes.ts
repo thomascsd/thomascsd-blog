@@ -1,3 +1,4 @@
+import { PostComponent } from './post/post.component';
 import { LoginComponent } from './Login/Login.component';
 import { AdminComponent } from './admin/admin.component';
 import { Routes, CanActivate } from '@angular/router';
@@ -10,6 +11,7 @@ export const routes: Routes = [
     { path: '', component: ContentComponent },
     { path: 'about', component: AboutComponent },
     { path: 'admin', component: AdminComponent, canActivate: [LoggedInGuardService] },
-    { path: 'login', component: LoginComponent }
+    { path: 'login', component: LoginComponent },
+    { path: 'post/:id', component : PostComponent}
 ];
 
