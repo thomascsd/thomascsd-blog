@@ -11,7 +11,7 @@ export class LoggedInGuardService implements CanActivate {
     }
     canActivate() {
         if (Meteor.user()) {
-            return true;;
+            return true;
         }
         else {
             this.router.navigate(['login']);

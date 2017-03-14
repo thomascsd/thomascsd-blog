@@ -1,3 +1,13 @@
 // 將您的設定放入此檔案中以覆寫預設值和使用者設定。
 {
+    "angulardoc.repoId": "4def7d52-b895-4406-a400-0d0c815c2520",
+    "angulardoc.directoryFilter": [
+        "!typings",
+        "!node_modules",
+        "!.vscode"
+    ],
+    "angulardoc.fileFilter": [
+        "**/!(*.*spec).ts"
+    ],
+    "angulardoc.lastSync": 0
 }
