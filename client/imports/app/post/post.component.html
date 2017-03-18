@@ -1,9 +1,8 @@
-<app-header></app-header>
+<app-header bgUrl="images/PostDefault.jpg" [heading]="post.title" [meta]="post.createdAt | date:'yyyy/mm/dd'" ></app-header>
 <article>
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-       
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" [innerHTML]="post.content | markdown">
       </div>
     </div>
   </div>
