@@ -9,6 +9,7 @@ Meteor.methods({
             title: post.title,
             content: post.content,
             tag: post.tag,
+            bgImageUrl: post.bgImageUrl || '',
             createdAt: new Date()
         });
 

@@ -1,4 +1,4 @@
-<app-header bgUrl="images/PostDefault.jpg" [heading]="post.title" [meta]="post.createdAt | date:'yyyy/mm/dd'" ></app-header>
+<app-header [bgUrl]="post.bgImageUrl || 'images/PostDefault.jpg'" [heading]="post.title" [meta]="post.createdAt | date:'yyyy/MM/dd'" ></app-header>
 <article>
   <div class="container">
     <div class="row">
