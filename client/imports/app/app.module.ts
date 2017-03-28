@@ -13,6 +13,7 @@ import { PostlistComponent } from './postlist/postlist.component';
 import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './Login/Login.component';
 import { MarkdownPipe } from './pipes/markdown/markdown.pipe';
+import { ReadmorePipe } from './pipes/readmore/readmore.pipe';
 import { routes } from './app.routes';
 import { LoggedInGuardService } from './services/LoggedInGuard.service';
 import { MarkdownService } from './pipes/markdown/markdown.service';
@@ -31,7 +32,8 @@ import { MarkdownService } from './pipes/markdown/markdown.service';
     LoginComponent,
     PostlistComponent,
     HeaderComponent,
-    MarkdownPipe
+    MarkdownPipe,
+    ReadmorePipe
   ],
   // Entry Components
   entryComponents: [

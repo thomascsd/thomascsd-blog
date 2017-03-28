@@ -3,7 +3,7 @@
     <h2 class="post-title">
       {{po.title}}
     </h2>
-    <p class="post-subtitle" [innerHTML]="po.content | markdown" >
+    <p class="post-subtitle" [innerHTML]="po.content | readmore:200 | markdown" >
     </p>
   </a>
   <p class="post-meta"> {{po.createdAt | date:'yyyy/MM/dd'}}</p>
