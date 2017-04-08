@@ -24,7 +24,8 @@ export class AdminComponent implements OnInit, AfterViewInit {
     this.postForm = this.fb.group({
       title: ['', Validators.required],
       content: ['', Validators.required],
-      tag: ['', Validators.required]
+      tag: ['', Validators.required],
+      bgImageUrl: ['']
     });
   }
 

@@ -4,7 +4,7 @@
   "scripts": {
     "start": "meteor run --settings settings.json",
     "start:prod": "meteor run --production",
-    "build": "meteor build ./build/",
+    "build": "meteor build ./build/ --architecture os.linux.x86_64",
     "clear": "meteor reset",
     "meteor:update": "meteor update --all-packages",
     "test": "meteor test --driver-package practicalmeteor:mocha",
