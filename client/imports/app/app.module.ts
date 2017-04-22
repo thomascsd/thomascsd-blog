@@ -17,6 +17,7 @@ import { ReadmorePipe } from './pipes/readmore/readmore.pipe';
 import { routes } from './app.routes';
 import { LoggedInGuardService } from './services/LoggedInGuard.service';
 import { MarkdownService } from './pipes/markdown/markdown.service';
+import { EditorComponent } from './editor/editor.component';
 
 
 @NgModule({
@@ -33,8 +34,9 @@ import { MarkdownService } from './pipes/markdown/markdown.service';
     PostlistComponent,
     HeaderComponent,
     MarkdownPipe,
-    ReadmorePipe
-  ],
+    ReadmorePipe,
+    EditorComponent
+],
   // Entry Components
   entryComponents: [
     AppComponent

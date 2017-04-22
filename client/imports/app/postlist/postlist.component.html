@@ -7,5 +7,6 @@
     </p>
   </a>
   <p class="post-meta"> {{po.createdAt | date:'yyyy/MM/dd'}}</p>
+  <p *ngIf="!!Meteor.user()">Edit</p>
 </div>
 <hr>
