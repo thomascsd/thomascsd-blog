@@ -5,10 +5,15 @@
     "start": "meteor run --settings settings.json",
     "start:prod": "meteor run --production",
     "build": "meteor build ./build/ --architecture os.linux.x86_64",
+    "build2": "meteor build .deploy --directory",
     "clear": "meteor reset",
     "meteor:update": "meteor update --all-packages",
     "test": "meteor test --driver-package practicalmeteor:mocha",
-    "test:ci": "meteor test --once --driver-package dispatch:mocha-phantomjs"
+    "test:ci": "meteor test --once --driver-package dispatch:mocha-phantomjs",
+    "cleanup": "del/F ../bundle/*.*",
+    "dist": "meteor build ../ --directory --architecture os.linux.x86_64 --server-only",
+    "predeploy": "npm run dist && copy app.yaml ../bundle/",
+    "deploy": "npm run predeploy && (cd ../bundle && gcloud app deploy -q)"
   },
   "devDependencies": {
     "@types/chai": "3.4.33",
