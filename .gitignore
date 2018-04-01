@@ -1,10 +1,11 @@
-node_modules/
-.meteor/local
+# dependencies
+node_modules
+
+# logs
 npm-debug.log
-typings
-.idea
-build
+
+# Nuxt build
+.nuxt
+
+# Nuxt generate
 dist
-settings.json
-app.yaml
-.deploy

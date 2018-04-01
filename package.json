@@ -1,49 +1,30 @@
 {
-  "name": "thomascsd-blog",
+  "name": "nuxt-content-first",
+  "version": "1.0.0",
+  "description": "Nuxt.js Content Site",
+  "author": "",
   "private": true,
+  "dependencies": {
+    "nuxtent": "latest",
+    "nuxt": "^1.0.0-rc11",
+    "@nuxtjs/axios": "latest"
+  },
   "scripts": {
-    "start": "meteor run --settings settings.json",
-    "start:prod": "meteor run --production",
-    "build": "meteor build ./build/ --architecture os.linux.x86_64",
-    "build2": "meteor build .deploy --directory",
-    "clear": "meteor reset",
-    "meteor:update": "meteor update --all-packages",
-    "test": "meteor test --driver-package practicalmeteor:mocha",
-    "test:ci": "meteor test --once --driver-package dispatch:mocha-phantomjs",
-    "cleanup": "del/F ../bundle/*.*",
-    "dist": "meteor build ../ --directory --architecture os.linux.x86_64 --server-only",
-    "predeploy": "npm run dist && copy app.yaml ../bundle/",
-    "deploy": "npm run predeploy && (cd ../bundle && gcloud app deploy -q)"
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup",
+    "precommit": "npm run lint"
   },
   "devDependencies": {
-    "@types/chai": "3.4.33",
-    "@types/jquery": "^2.0.39",
-    "@types/mocha": "2.2.32",
-    "@types/underscore": "^1.7.36",
-    "chai": "3.5.0",
-    "chai-spies": "0.7.1",
-    "meteor-node-stubs": "0.2.4",
-    "meteor-typings": "1.3.1"
-  },
-  "dependencies": {
-    "@angular/common": "2.4.1",
-    "@angular/compiler": "2.4.1",
-    "@angular/core": "2.4.1",
-    "@angular/forms": "2.4.1",
-    "@angular/platform-browser": "2.4.1",
-    "@angular/platform-browser-dynamic": "2.4.1",
-    "@angular/router": "3.4.1",
-    "angular2-meteor": "0.7.1",
-    "angular2-meteor-accounts-ui": "^1.0.0",
-    "angular2-meteor-polyfills": "0.1.1",
-    "angular2-meteor-tests-polyfills": "0.0.2",
-    "babel-runtime": "^6.20.0",
-    "jquery": "^3.1.1",
-    "meteor-rxjs": "0.4.7",
-    "ng2-bootstrap": "^1.1.16-11",
-    "reflect-metadata": "0.1.9",
-    "rxjs": "5.0.2",
-    "showdown": "^1.6.4",
-    "zone.js": "0.7.4"
+    "babel-eslint": "^7.1.1",
+    "eslint": "^3.15.0",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-loader": "^1.6.1",
+    "eslint-plugin-html": "^2.0.0",
+    "eslint-plugin-promise": "^3.4.1",
+    "eslint-plugin-standard": "^2.0.1"
   }
 }
