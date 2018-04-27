@@ -4,13 +4,18 @@
   "description": "Nuxt.js Content Site",
   "author": "",
   "private": true,
+  "config": {
+    "nuxt": {
+      "port": "3200"
+    }
+  },
   "dependencies": {
     "nuxtent": "latest",
-    "nuxt": "^1.0.0-rc11",
+    "nuxt": "^1.4.0",
     "@nuxtjs/axios": "latest"
   },
   "scripts": {
-    "dev": "nuxt",
+    "dev": "cross-env PORT=3200 nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
@@ -19,12 +24,15 @@
     "precommit": "npm run lint"
   },
   "devDependencies": {
-    "babel-eslint": "^7.1.1",
-    "eslint": "^3.15.0",
-    "eslint-config-standard": "^6.2.1",
-    "eslint-loader": "^1.6.1",
-    "eslint-plugin-html": "^2.0.0",
-    "eslint-plugin-promise": "^3.4.1",
-    "eslint-plugin-standard": "^2.0.1"
+    "babel-eslint": "^8.2.2",
+    "cross-env": "^5.1.4",
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-html": "^4.0.2",
+    "eslint-plugin-import": "2.10.0",
+    "eslint-plugin-node": "6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.0.1"
   }
 }
