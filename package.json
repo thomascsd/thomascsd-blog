@@ -10,9 +10,10 @@
     }
   },
   "dependencies": {
-    "nuxtent": "latest",
+    "@nuxtjs/axios": "latest",
     "nuxt": "^1.4.0",
-    "@nuxtjs/axios": "latest"
+    "nuxtent": "latest",
+    "prismjs": "^1.14.0"
   },
   "scripts": {
     "dev": "cross-env PORT=3200 nuxt",

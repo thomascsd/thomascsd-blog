@@ -16,10 +16,10 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <!-- <a href="{{ site.baseurl }}/">Blog</a> -->
+                        <a href="/">Blog</a>
                     </li>
                     <li>
-                        <!-- <a href="{{ site.baseurl }}/about">About</a> -->
+                        <a href="/about">About</a>
                     </li>
                 </ul>
             </div>
@@ -35,20 +35,20 @@
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <ul class="list-inline text-center">
                         <li>
-                            <!-- <a href="https://www.twitter.com/{{ site.footer-links.twitter }}">
+                            <a href="https://www.twitter.com/thomascsd">
                                 <span class="fa-stack fa-lg">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
                                 </span>
-                            </a> -->
+                            </a>
                         </li>
                         <li>
-                            <!-- <a href="https://github.com/{{ site.footer-links.github }}">
+                            <a href="https://github.com/thomascsd">
                                 <span class="fa-stack fa-lg">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-github fa-stack-1x fa-inverse"></i>
                                 </span>
-                            </a> -->
+                            </a>
                         </li>
                     </ul>
                     <p class="copyright text-muted"></p>

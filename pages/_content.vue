@@ -9,22 +9,11 @@
 export default {
   asyncData: async ({ app, route, payload }) => ({
     post: await app.$content('/').get(route.path) || payload
-  })
+  }),
+  layout: 'post'
 }
 </script>
 
 <style>
-.content-container
-{
-  width: 38rem;
-  margin: 0 auto
-}
 
-.post-title
-{
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  font-weight: 500;
-  color: #35495e;
-}
 </style>
