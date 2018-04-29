@@ -34,15 +34,7 @@
 
 <script>
 export default {
-  async asyncData ({ app }) {
-    return {
-      title: ''
-    }
-  },
-  layout: 'default'
+
 }
 </script>
 
-<style>
-
-</style>
