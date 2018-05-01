@@ -21,8 +21,5 @@ module.exports = {
         }
       }
     }
-  },
-  css: [
-    'prismjs/themes/prism-okaidia.css'
-  ]
+  }
 }

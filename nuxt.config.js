@@ -28,7 +28,8 @@ module.exports = {
         href:
           'https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
       },
-      { rel: 'stylesheet', href: '/style.min.css' }
+      { rel: 'stylesheet', href: '/style.min.css' },
+      { rel: 'stylesheet', href: '/prism-okaidia.css' }
     ]
   },
   build: {
