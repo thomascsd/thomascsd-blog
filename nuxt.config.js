@@ -1,13 +1,13 @@
 module.exports = {
   head: {
-    title: 'Thomas\'blog',
+    title: 'Thomas blog',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Nuxtent project' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      // { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
         rel: 'stylesheet',
         href:
@@ -29,7 +29,7 @@ module.exports = {
           'https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
       },
       { rel: 'stylesheet', href: '/style.min.css' },
-      { rel: 'stylesheet', href: '/prism-okaidia.css' }
+      { rel: 'stylesheet', href: '/prism-coy.css' }
     ]
   },
   build: {
