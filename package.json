@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "latest",
+    "moment": "^2.22.1",
     "nuxt": "^1.4.0",
     "nuxtent": "latest",
     "prismjs": "^1.14.0"

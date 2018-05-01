@@ -28,6 +28,8 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name: 'BlogNav'
+}
 </script>
 
