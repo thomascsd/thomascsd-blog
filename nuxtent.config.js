@@ -10,8 +10,9 @@ module.exports = {
     isPost: false
   },
   api: {
-    baseURL: 'http://localhost:3200',
-    browserBaseURL: 'http://localhost:3200'
+    baseURL: process.env.NODE_ENV === 'production'
+      ? 'https://thomascsd.github.io'
+      : 'http://localhost:3200'
   },
   parsers: {
     md: {
