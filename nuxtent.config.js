@@ -2,17 +2,15 @@ const Prism = require('prismjs')
 
 module.exports = {
   content: {
-    permalink: ':year/:slug',
+    permalink: '/:slug',
     page: '/_content',
     generate: [ // for static build
       'get', 'getAll'
     ],
-    isPost: false
+    isPost: true
   },
   api: {
-    baseURL: process.env.NODE_ENV === 'production'
-      ? 'https://thomascsd.github.io'
-      : 'http://localhost:3200'
+    baseURL: 'http://localhost:3200'
   },
   parsers: {
     md: {

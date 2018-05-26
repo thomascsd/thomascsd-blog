@@ -7,17 +7,19 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-          <div class="post-preview" v-for="post in posts" :key="post.title">
-            <nuxt-link :to="post.permalink">
-              <h2 class="post-title">
-                {{ post.title }}
-              </h2>
-            </nuxt-link>
-            <!-- <p class="post-meta">
+          <div v-for="post in posts" :key="post.title">
+            <div class="post-preview" >
+              <nuxt-link :to="post.permalink">
+                <h2 class="post-title">
+                  {{ post.title }}
+                </h2>
+              </nuxt-link>
+              <!-- <p class="post-meta">
           <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
         </p> -->
+            </div>
+            <hr>
           </div>
-          <hr>
 
           <!-- Pager 
       <ul class="pager">
