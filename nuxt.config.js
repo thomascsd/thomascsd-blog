@@ -54,6 +54,7 @@ module.exports = {
   },
   css: [
     'prismjs/themes/prism.css',
+    'gitment/style/default.css',
     '~/css/style.min.css'
   ]
 }

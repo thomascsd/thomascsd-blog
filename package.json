@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.1",
+    "gitment": "0.0.3",
     "moment": "^2.22.1",
     "nuxt": "^1.4.0",
     "nuxtent": "latest",
