@@ -47,7 +47,9 @@ module.exports = {
     }
   },
   modules: [
-    ['nuxtent']
+    'nuxtent', ['@nuxtjs/google-analytics', {
+      id: 'UA-102188481-1'
+    }]
   ],
   loading: {
     color: '#3B8070'
