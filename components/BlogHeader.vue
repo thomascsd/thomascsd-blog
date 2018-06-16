@@ -7,7 +7,7 @@
                     <div class="site-heading">
                         <h1>Thomas Blog</h1>
                         <hr class="small">
-                        <span class="subheading">A Clean Blog Theme by Start Bootstrap</span>
+                        <span class="subheading">Learning Code, Writing Code</span>
                     </div>
                 </div>
             </div>
