@@ -22,7 +22,7 @@
     "dev": "cross-env PORT=3200 nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "cross-env NODE_ENV='production' nuxt generate",
+    "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint"
   },
