@@ -28,6 +28,11 @@ import PostHeader from '../components/PostHeader'
 import Gitment from 'gitment'
 
 export default {
+  head () {
+    return {
+      title: this.post.title
+    }
+  },
   async asyncData ({ app, route, payload }) {
     return {
       post: await app.$content('/').get(route.path)
