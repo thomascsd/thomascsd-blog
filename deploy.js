@@ -35,22 +35,19 @@ const writeFileAsync = util.promisify(fs.writeFile);
     consola.info(`$api.pathName:${$api.pathName}`);
 
     let content = await readFileAsync($api.pathName);
-
-    consola.info(`typeof content:${typeof content}`);
-
     content = content.toString().replace(/http:\/\/localhost:3200/i, 'https://thomascsd.github.io');
     await writeFileAsync($api.pathName, content);
 
     const blogPath = path.join(rootPath, blogDistPath)
 
-    $blogSrc = await $('./dist/*');
+    $blogSrc = await $('./dist');
 
     $blogSrc
         .each(async (node) => {
             consola.info(`step3:復製檔案至thomas.github.io內的檔案，name:${node.pathName}`);
 
             try {
-                await node.copy(blogPath);
+                 await node.copy(blogPath);
             } catch (err) {
                 consola.error(err);
             }
