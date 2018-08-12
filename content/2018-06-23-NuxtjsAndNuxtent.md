@@ -1,5 +1,6 @@
 ---
 title: 使用Nuxt.js及Nuxtent建立Blog的心得
+bgImageUrl: /images/05/05-0.jpg
 ---
 
 Nuxt.js是內建SSR的vue.js框架，我最感興趣的部份是可輸出靜態的Html，如此就可以輕鬆的將程式部署至GitHub Page上，並且可以使用module來擴充功能。
@@ -202,7 +203,7 @@ export default {
 
 ## 結論
 
-很方便將一個Blog建立起來，但是缺乏一些功能，例如標籤、Archive功能，這些都要自己實作出來。
+很方便將一個Blog建立起來，但是缺乏一些功能，例如標籤、Archive功能，這些都要自己實作出來。原始碼可以參考[這裡](https://github.com/thomascsd/thomascsd-blog)。
 
 
 

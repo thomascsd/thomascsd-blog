@@ -2,7 +2,7 @@
   <div>
 
     <!-- Page Header -->
-    <post-header :title="post.title" :postDate="post.date"></post-header>
+    <post-header :title="post.title" :postDate="post.date" :bgImageUrl="post.bgImageUrl"></post-header>
 
     <article>
       <div class="container">
