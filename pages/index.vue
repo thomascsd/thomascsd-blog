@@ -14,9 +14,7 @@
                   {{ post.title }}
                 </h2>
               </nuxt-link>
-              <!-- <p class="post-meta">
-          <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-        </p> -->
+              <p class="post-meta">on {{post.date}}</p>
             </div>
             <hr>
           </div>
