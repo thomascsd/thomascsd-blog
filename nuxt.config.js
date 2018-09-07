@@ -11,7 +11,7 @@ module.exports = {
       {
         hid: 'description',
         name: 'description',
-        content: 'Nuxtent project'
+        content: 'Thomas Blog'
       }
     ],
     link: [
