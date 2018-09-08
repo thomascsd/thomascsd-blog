@@ -6,57 +6,70 @@ Node.js處理檔案我個人覺得不是很方便，有時候會覺得卡卡的�
 
 因為我的Blog是分成兩個專案，一個是開發使用，一個是實際Blog的網站，而我使用nuxt.js建立Blog的心得，可以參考之前的[文章](/example-of-promise)。之前的複製檔案都是用手動，所以想寫個小程式幫助複製檔案，剛好趁這個機會練習使用draxt.js這個套件。
 
-# 程式碼
+## 原始碼
 
 ```javascript
 const fs = require('fs');
 const path = require('path');
 const util = require('util');
 const $ = require('draxt');
+const consola = require('consola');
 const readFileAsync = util.promisify(fs.readFile);
 const writeFileAsync = util.promisify(fs.writeFile);
 
 (async () => {
-const rootPath = path.join(process.cwd(), '..');
-const blogDistPath = `/thomascsd.github.io/`;
-let $blogSrc = await $('./dist/**');
-const $blogDist = await $('.' + blogDistPath + '**', {
-cwd: rootPath
-});
+  const rootPath = path.join(process.cwd(), '..');
+  const blogDistPath = `/thomascsd.github.io/`;
+  let $blogSrc = await $('./dist/**');
+  const $blogDist = await $('.' + blogDistPath + '**', {
+    cwd: rootPath
+  });
 
-$blogDist
-.each(async (node) => {
-await node.remove();
-});
+  $blogDist
+    .filter(
+      node =>
+        (node.isDirectory() && node.baseName.indexOf('.') === -1) ||
+        node.isFile()
+    )
+    .each(async node => {
+      consola.info(
+        `step1-1:刪除thomascsd.github.io內的檔案，name:${node.pathName}`
+      );
+      await node.remove();
+    });
 
-const $api = $blogSrc
-.filter(node => node.baseName.indexOf('app.') !== -1 && node.extension === 'js')
-.first();
+  consola.info(`step2:api.js的localhost更換成thomascsd.github.io`);
+  const $api = $blogSrc
+    .filter(
+      node => node.baseName.indexOf('app.') !== -1 && node.extension === 'js'
+    )
+    .first();
 
-let content = await readFileAsync($api.pathName);
-content = content.toString().replace(/http:\/\/localhost:3200/i, 'https://thomascsd.github.io');
-await writeFileAsync($api.pathName, content);
+  let content = await readFileAsync($api.pathName);
+  content = content
+    .toString()
+    .replace(/http:\/\/localhost:3200/i, 'https://thomascsd.github.io');
+  await writeFileAsync($api.pathName, content);
 
-const blogPath = path.join(rootPath, blogDistPath);
+  const blogPath = path.join(rootPath, blogDistPath);
 
-$blogSrc = await $('./dist');
-$blogSrc
-.each(async (node) => {
-consola.info(`step3:復製檔案至thomascsd.github.io內的檔案，name:${node.pathName}`);
+  $blogSrc = await $('./dist');
+  $blogSrc.each(async node => {
+    consola.info(
+      `step3:復製檔案至thomascsd.github.io內的檔案，name:${node.pathName}`
+    );
 
-try {
-await node.copy(blogPath);
-} catch (err) {
-consola.error(err);
-}
+    try {
+      await node.copy(blogPath);
+    } catch (err) {
+      consola.error(err);
+    }
+  });
+})().catch(err => consola.error(err));
 
-});
-
-})()
-.catch(err => consola.error(err));
 ```
 
-# 解說
+## 程式說明
 
 ```javascript
 const fs = require('fs');
@@ -86,18 +99,26 @@ cwd: rootPath
 jQuery是使用CSS Selector來選擇元素，而draxt.js是使用glob pattern選取檔案或目錄，關於glog pattern可以參考[文件](https://en.wikipedia.org/wiki/Glob_(programming))。
 
 
-## 第一步刪除thomascsd.github.io內的檔案
+### 第一步刪除thomascsd.github.io內的檔案
 
 ```javascript
 $blogDist
-.each(async (node) => {
-await node.remove();
-});
+  .filter(
+    node =>
+      (node.isDirectory() && node.baseName.indexOf('.') === -1) ||
+      node.isFile()
+    )
+  .each(async node => {
+    consola.info(
+      `step1-1:刪除thomascsd.github.io內的檔案，name:${node.pathName}`
+    );
+    await node.remove();
+  });
 ```
 
-也有提供**each**的方法，將thomascsd.github.io目錄下的子目錄及檔案都刪除。
+先用filter將包含.的目前都過濾掉，因為像是.git的目錄不能希望刪除，並且也有提供**each**的方法，將thomascsd.github.io目錄下的子目錄及檔案都刪除。
 
-## 第二步api.js的localhost更換成thomascsd.github.io
+### 第二步api.js的localhost更換成thomascsd.github.io
 
 ```javascript
 const $api = $blogSrc
@@ -110,7 +131,7 @@ await writeFileAsync($api.pathName, content);
 ```
 因為app.js的檔名會包含雜湊值，所以使用**filter**取得檔名包含app及副檔名為js的檔案，最後讀取app.js內容，將localhost替換成thomascsd.github.io後，再寫回app.js。
 
-## 第三步複製檔案至thomascsd.github.io目錄
+### 第三步複製檔案至thomascsd.github.io目錄
 
 ```javascript
 const blogPath = path.join(rootPath, blogDistPath);
@@ -129,7 +150,7 @@ consola.error(err);
 
 這邊很單純的，將目錄dist複製至目錄thomascsd.github.io，這樣即完成所有的步驟了，最後輸入``node deploy.js``即完成。
 
-# 結論
+## 結論
 
 個人是覺得這個套件簡化了處理檔案的一些煩瑣的操作，推薦給大家處理檔案的另外一種選擇。這次原始碼在[這裡](https://github.com/thomascsd/thomascsd-blog/blob/master/deploy.js)。
 
