@@ -39,9 +39,11 @@ module.exports = {
     }
   },
   modules: [
-    'nuxtent', ['@nuxtjs/google-analytics', {
+    'nuxtent',
+     ['@nuxtjs/google-analytics', {
       id: 'UA-102188481-1'
-    }]
+    }],
+    '@nuxtjs/sitemap'
   ],
   loading: {
     color: '#3B8070'
@@ -50,5 +52,22 @@ module.exports = {
     'prismjs/themes/prism.css',
     'gitment/style/default.css',
     '~/css/style.min.css'
-  ]
+  ],
+  sitemap: {
+    path: '/sitemap.xml',
+    hostname: 'https://thomascsd.github.io',
+    cacheTime: 1000 * 60 * 15,
+    gzip: true,
+    generate: true, // Enable me when using nuxt generate
+    routes:[
+      '/hello-world',
+      '/build-blog-with-jekyll',
+      '/vuejs-in-aspnet-mvc',
+      '/vscode-debug-for-nodejs-andn-agular',
+      '/nuxtjs-and-nuxten',
+      '/example-of-promise',
+      '/tutorial-of-draxtj',
+      '/module-pattern'
+    ]
+  }
 }
