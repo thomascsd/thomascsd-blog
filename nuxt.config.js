@@ -66,8 +66,9 @@ module.exports = {
       '/vscode-debug-for-nodejs-andn-agular',
       '/nuxtjs-and-nuxten',
       '/example-of-promise',
-      '/tutorial-of-draxtj',
-      '/module-pattern'
+      '/tutorial-of-draxtjs',
+      '/module-pattern',
+      '/module-pattern-part2'
     ]
   }
 }
