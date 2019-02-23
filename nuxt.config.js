@@ -68,7 +68,8 @@ module.exports = {
       '/example-of-promise',
       '/tutorial-of-draxtjs',
       '/module-pattern',
-      '/module-pattern-part2'
+      '/module-pattern-part2',
+      '/create-library-with-angular'
     ]
   }
 }

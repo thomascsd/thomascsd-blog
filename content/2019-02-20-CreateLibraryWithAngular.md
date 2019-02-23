@@ -1,3 +1,8 @@
+---
+title: 於Angular中，建立Library的心得
+bgImageUrl: /images/10/10-0.jpg
+---
+
 在Angular CLI 6.0以上就可以直接建立Library，而Library的用途可以將自已建立的元件發佈至NPM，或是專案一些共同的元件拆分出去。
 
 ## 建立Library
@@ -11,6 +16,7 @@ ng g library shared-comp
 
 <img class="img-responsive" src="/images/10/10-01.gif">
 
+
  ```
 ng g c header --project=shared-comp
 ```
@@ -21,7 +27,7 @@ ng g c header --project=shared-comp
 
 如上圖，我們所建立library會在目錄projects下，例如這次我建立的shared-comp，並且與一般的Angular專案不同，component位於lib目錄下。
 
-```typescript
+```javascript
 //public_api.ts
 export * from './lib/header/header.component';
 export * from './lib/shared-comp.module';
@@ -31,7 +37,7 @@ export * from './lib/shared-comp.module';
 
 <img class="img-responsive" src="/images/10/10-3.png">
 
-```typescript
+```javascript
 //app.module.ts
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -47,7 +53,7 @@ export class AppModule {}
 
 ```
 ```html
-//app.component.html
+<!--app.component.html-->
 <lib-header></lib-header>
 <div>Hello</div>
 ```
@@ -76,11 +82,15 @@ npm publish
 
 ## 升級需注意的心得
 
-我發現從Angular 5升級至Angular6/7時，除了輸入``ng update``外，還需另外調整一些設定才行，也可以參考這篇管方的[文章](https://github.com/angular/angular-cli/wiki/stories-create-library#note-for-upgraded-projects)
+我發現從Angular 5升級至Angular6/7時，除了輸入``ng update``外，還需另外調整一些設定才行，也可以參考這篇官方的[文章](https://github.com/angular/angular-cli/wiki/stories-create-library#note-for-upgraded-projects)
 
 - tsconfig.json：需調整paths的路徑，路徑調整至 dist/project-name，不然會發現找不到package的錯誤。
 
 - tsconfig.app.json：需要移除baseUrl。
+
+#結論
+
+Angular CLI是很強大的工具，輸入一些命令，即可產生Application或是Library，現在還可以搭配Angular Console，程式開發變得很方便，
 
 
 
