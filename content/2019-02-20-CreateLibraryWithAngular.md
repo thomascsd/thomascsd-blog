@@ -88,7 +88,7 @@ npm publish
 
 - tsconfig.app.json：需要移除baseUrl。
 
-#結論
+## 結論
 
 Angular CLI是很強大的工具，輸入一些命令，即可產生Application或是Library，現在還可以搭配Angular Console，程式開發變得很方便，
 
