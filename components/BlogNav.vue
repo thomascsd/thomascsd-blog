@@ -17,6 +17,9 @@
                         <a href="/">Blog</a>
                     </li>
                     <li>
+                        <a href="https://thomascsd.github.io/repos/" target="_blank">Repos</a>
+                    </li>
+                    <li>
                         <a href="/about">About</a>
                     </li>
                 </ul>
