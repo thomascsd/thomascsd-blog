@@ -69,7 +69,8 @@ module.exports = {
       '/tutorial-of-draxtjs',
       '/module-pattern',
       '/module-pattern-part2',
-      '/create-library-with-angular'
+      '/create-library-with-angular',
+      '/tutorial-of-uppy'
     ]
   }
 }
