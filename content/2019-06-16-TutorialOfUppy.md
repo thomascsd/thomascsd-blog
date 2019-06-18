@@ -45,7 +45,7 @@ export class UppyComponent implements AfterViewInit {
 }
 ```
 
-因為善常的是Angular，所以這個範例，想將Angular和Uppy整合，所以首先實作AfterViewInit，確認頁面的DOM都戴入完成後，才能建立Uppy的物件。
+因為擅長的是Angular，所以這個範例，想將Angular和Uppy整合，所以首先實作AfterViewInit，確認頁面的DOM都戴入完成後，才能建立Uppy的物件。
 
 
 ### Dashboard
