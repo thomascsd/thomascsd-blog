@@ -13,7 +13,6 @@
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/google-analytics": "^2.1.0",
     "@nuxtjs/sitemap": "^0.1.2",
-    "gitment": "0.0.3",
     "moment": "^2.24.0",
     "nuxt": "^1.4.5",
     "nuxtent": "latest",
