@@ -14,8 +14,7 @@ module.exports = {
         content: 'Thomas Blog'
       }
     ],
-    link: [
-      {
+    link: [{
         rel: 'stylesheet',
         href: 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'
       },
@@ -39,7 +38,7 @@ module.exports = {
   },
   modules: [
     'nuxtent',
-     ['@nuxtjs/google-analytics', {
+    ['@nuxtjs/google-analytics', {
       id: 'UA-102188481-1'
     }],
     '@nuxtjs/sitemap'
@@ -57,7 +56,7 @@ module.exports = {
     cacheTime: 1000 * 60 * 15,
     gzip: true,
     generate: true, // Enable me when using nuxt generate
-    routes:[
+    routes: [
       '/hello-world',
       '/build-blog-with-jekyll',
       '/vuejs-in-aspnet-mvc',
@@ -68,7 +67,8 @@ module.exports = {
       '/module-pattern',
       '/module-pattern-part2',
       '/create-library-with-angular',
-      '/tutorial-of-uppy'
+      '/tutorial-of-uppy',
+      '/tutorial-of-vscode-extension'
     ]
   }
 }

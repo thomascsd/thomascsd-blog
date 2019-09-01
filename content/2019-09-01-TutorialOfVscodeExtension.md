@@ -17,9 +17,10 @@ npm install -g yo generator-code
 
 輸入``yo code``，來初始化VSCode extesion專案，接著輸入一些參數，這邊我是用TypeScript開發的，接著輸入一些參數後，就可以很輕易的建立一個樣板。
 
-<img class="img-responsive" src="/images/12/12-01.png">
+<img class="img-responsive" src="/images/12/12-1.png">
 
-<img class="img-responsive" src="/images/12/12-02.png">
+
+<img class="img-responsive" src="/images/12/12-2.png">
 
 ## 建立
 
@@ -58,7 +59,7 @@ if (folders) {
 
 ### 建立項目清單
 
-<img class="img-responsive" src="/images/12/12-03.png">
+<img class="img-responsive" src="/images/12/12-3.png">
 
 如上圖，有時會需要讓人選擇，可以使用下列API來顯示選項：
 
