@@ -7,9 +7,7 @@ bgImageUrl: /images/12/12-0.jpg
 
 ## 初始
 
-首先按照[官方文件](https://code.visualstudio.com/api/get-started/your-first-extension
-
-)，需要先安裝[Yeoman](https://yeoman.io/)以及VS Code Extension Generator。
+首先按照[官方文件](https://code.visualstudio.com/api/get-started/your-first-extension)，需要先安裝[Yeoman](https://yeoman.io/)以及VS Code Extension Generator。
 
 ```
 npm install -g yo generator-code
@@ -26,7 +24,7 @@ npm install -g yo generator-code
 
 因為VSCode是使用Electron來開發的，代表使用Node.js的模組是沒有問題的，所以這邊有使用到``path``及``fs``。
 
-> 在1.37版之後，VSCode Extension API有增加vscode.workspace.fs來取代fs，是由於需要遠端存取檔案，可參考[VSCode 更新記錄 1.37](https://code.visualstudio.com/updates/v1_37#_extension-authoring)， 並且要注意的是，vscode套件被拆分為@type/vsocde及vscode-test。
+> 在1.37版之後，VSCode Extension API有增加vscode.workspace.fs來取代fs，是由於需要遠端存取檔案，可參考[VSCode 更新記錄 1.37](https://code.visualstudio.com/updates/v1_37#_extension-authoring)， 並且要注意的是，vscode套件被拆分為@types/vsocde及vscode-test。
 
 ### 取得檔案的路徑
 
@@ -40,7 +38,7 @@ npm install -g yo generator-code
 const tempPath = this.context.asAbsolutePath(path.join('templates', `${selectedItem}.md`));
 ```
 
-可以將相對路徑轉換成目前檔案的路徑，另外為了跨平台的相容性，相對路徑應該使用''path.join''來連結各個目錄及檔案。
+可以將相對路徑轉換成目前檔案的路徑，另外為了跨平台的相容性，相對路徑應該使用``path.join``來連結各個目錄及檔案。
 
 ### 工作區(Workspace)
 

@@ -22,6 +22,10 @@ module.exports = {
         rel: 'stylesheet',
         href: 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'
       }
+    ],
+    script:[
+      {src: 'https://code.jquery.com/jquery-3.4.1.slim.min.js', body: true},
+      {src: '/bootstrap.min.js', body: true}
     ]
   },
   build: {
