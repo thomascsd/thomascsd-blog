@@ -24,7 +24,7 @@ npm install -g yo generator-code
 
 因為VSCode是使用Electron來開發的，代表使用Node.js的模組是沒有問題的，所以這邊有使用到``path``及``fs``。
 
-> 在1.37版之後，VSCode Extension API有增加vscode.workspace.fs來取代fs，是由於需要遠端存取檔案，可參考[VSCode 更新記錄 1.37](https://code.visualstudio.com/updates/v1_37#_extension-authoring)， 並且要注意的是，vscode套件被拆分為@types/vsocde及vscode-test。
+> 在1.37版之後，VSCode Extension API有增加vscode.workspace.fs來取代fs，是由於需要遠端存取檔案，可參考[VSCode 更新記錄 1.37](https://code.visualstudio.com/updates/v1_37#_extension-authoring)， 並且要注意的是，vscode套件被拆分為@types/vscode及vscode-test。
 
 ### 取得檔案的路徑
 
