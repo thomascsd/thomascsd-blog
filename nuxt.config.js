@@ -1,7 +1,8 @@
 module.exports = {
   head: {
     title: 'Thomas blog',
-    meta: [{
+    meta: [
+      {
         charset: 'utf-8'
       },
       {
@@ -14,18 +15,21 @@ module.exports = {
         content: 'Thomas Blog'
       }
     ],
-    link: [{
+    link: [
+      {
         rel: 'stylesheet',
-        href: 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'
+        href:
+          'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'
       },
       {
         rel: 'stylesheet',
-        href: 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'
+        href:
+          'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'
       }
     ],
-    script:[
-      {src: 'https://code.jquery.com/jquery-3.4.1.slim.min.js', body: true},
-      {src: '/bootstrap.min.js', body: true}
+    script: [
+      { src: 'https://code.jquery.com/jquery-3.4.1.slim.min.js', body: true },
+      { src: '/bootstrap.min.js', body: true }
     ]
   },
   build: {
@@ -42,18 +46,18 @@ module.exports = {
   },
   modules: [
     'nuxtent',
-    ['@nuxtjs/google-analytics', {
-      id: 'UA-102188481-1'
-    }],
+    [
+      '@nuxtjs/google-analytics',
+      {
+        id: 'UA-102188481-1'
+      }
+    ],
     '@nuxtjs/sitemap'
   ],
   loading: {
     color: '#3B8070'
   },
-  css: [
-    'prismjs/themes/prism.css',
-    '~/css/style.min.css'
-  ],
+  css: ['prismjs/themes/prism.css', '~/css/style.min.css'],
   sitemap: {
     path: '/sitemap.xml',
     hostname: 'https://thomascsd.github.io',
@@ -72,7 +76,8 @@ module.exports = {
       '/module-pattern-part2',
       '/create-library-with-angular',
       '/tutorial-of-uppy',
-      '/tutorial-of-vscode-extension'
+      '/tutorial-of-vscode-extension',
+      '/svg-and-angular'
     ]
   }
-}
+};
