@@ -77,7 +77,8 @@ module.exports = {
       '/create-library-with-angular',
       '/tutorial-of-uppy',
       '/tutorial-of-vscode-extension',
-      '/svg-and-angular'
+      '/svg-and-angular',
+      '/class-validator-and-ngx-dynamic-form-builder'
     ]
   }
 };
