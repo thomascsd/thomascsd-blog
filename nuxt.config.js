@@ -78,7 +78,8 @@ module.exports = {
       '/tutorial-of-uppy',
       '/tutorial-of-vscode-extension',
       '/svg-and-angular',
-      '/class-validator-and-ngx-dynamic-form-builder'
+      '/class-validator-and-ngx-dynamic-form-builder',
+      '/angular-library'
     ]
   }
 };
