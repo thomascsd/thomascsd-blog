@@ -63,6 +63,8 @@ export class HomeComponent implements OnInit {
 
 如同上方的程式，只需引用UntilDestroy、untilDestroyed，不需在另外加上Subject或是ngOnDestroy之類的程式。
 
+> ``untilDestroyed``需要放在.pipe的最後面才行，參考[RxJS: Avoiding takeUntil Leaks](https://medium.com/angular-in-depth/rxjs-avoiding-takeuntil-leaks-fb5182d047ef)
+
 
 ## 6.[ngx-dynamic-form-builder](https://github.com/EndyKaufman/ngx-dynamic-form-builder)
 
