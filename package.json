@@ -16,7 +16,7 @@
     "moment": "^2.24.0",
     "nuxt": "^1.4.5",
     "nuxtent": "latest",
-    "prismjs": "^1.15.0"
+    "prismjs": "^1.21.0"
   },
   "scripts": {
     "dev": "cross-env PORT=3200 nuxt",
