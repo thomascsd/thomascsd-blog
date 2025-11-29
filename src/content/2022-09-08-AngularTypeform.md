@@ -1,8 +1,8 @@
 ---
 title: Angular TypeForm - 強型別Form的心得
 bgImageUrl: assets/images/25/25-0.jpg
-description: Angular v14 中最重要的 2 個功能，除了 Single Component 之外，就是 Typeform 了，而 Typeform 也就是在建立 Form 功能時，終於可以套用型別，方便開發及除錯，是期待很久的功能
-published: true
+description: 2024-11-10 更新：增加 FormBuild.group 和 class-validator 的程式說明 <hr 在 Angular v14 中最重要的 2 個功能，除了 Single Component 之外，就是 Typeform 了，而 Typeform 也就是在建立 Form 功能時
+slug: 2022-09-08-angular-typeform
 ---
 
 2024-11-10 更新：增加 FormBuild.group 和 class-validator 的程式說明

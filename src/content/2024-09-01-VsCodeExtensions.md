@@ -1,8 +1,8 @@
 ---
 title: VSCode Extensions 其他的選擇
 bgImageUrl: assets/images/31/31-0.jpeg
-description: 這次我要跟大家分享一些我覺得很好用的 VSCode 擴充套件。這些套件可能不太熱門，但我覺得它們非常實用。當然，我們都知道像 ESLint 和 GitLens 這樣的知名套件，
-published: true
+description: 這次我要跟大家分享一些我覺得很好用的 VSCode 擴充套件。這些套件可能不太熱門，但我覺得它們非常實用。當然，我們都知道像 ESLint 和 GitLens 這樣的知名套件，所以我不會再提到它們了。請大家參考看看。 Separators <img class="img-responsive" lo
+slug: 2024-09-01-vs-code-extensions
 ---
 
 這次我要跟大家分享一些我覺得很好用的 VSCode 擴充套件。這些套件可能不太熱門，但我覺得它們非常實用。當然，我們都知道像 ESLint 和 GitLens 這樣的知名套件，所以我不會再提到它們了。請大家參考看看。

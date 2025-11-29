@@ -1,8 +1,8 @@
 ---
 title: tsdx - 快速建立 npm 套件樣板的CLI工具
 bgImageUrl: assets/images/23/23-0.jpg
-description: 快速建立 npm 套件，所以在 GitHub 上尋找有沒有方便的套件，結果發現到了 tsdx，這個方便的 CLI 工具
-published: true
+description: 之前的文章使用 TypeScript 建立 Express.js，需要快速建立 npm 套件，所以在 GitHub 上尋找有沒有方便的套件，結果發現到了 tsdx，這個方便的 CLI 工具。 建立 ``` npx tsdx create mylib ``` 按照文件的說明，直接執行`npx tsdx
+slug: 2021-12-09-tutorial-of-tsdx
 ---
 
 之前的文章[使用 TypeScript 建立 Express.js](https://thomascsd.github.io/blog/2021-02-07-ExpressjssWithTypescript)，需要快速建立 npm 套件，所以在 GitHub 上尋找有沒有方便的套件，結果發現到了 [tsdx](httptrs://github.com/jaredpalmer/tsdx)，這個方便的 CLI 工具。

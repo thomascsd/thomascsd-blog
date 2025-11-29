@@ -1,8 +1,8 @@
 ---
 title: Ts.ED 設定 middleware
 bgImageUrl: assets/images/34/34-00.png
-description: iddleware 分為 Global middleware 和 Endpoint middleware 兩種。而 Gobal middleware，另一種是 Endpoint middleware，它使用@UseBefore裝飾器(decorator)設定在 Controller 上。我認為這種方式更符合我當前的專案需求。
-published: true
+description: 之前的文章介紹過 Ts.ED，它是一個建構在 express.js 或是 koa.js 之上，並添加許多便利功能的 TypeScript 框架。最近在設定自訂 middleware 時，我發現了一個不錯的作法，特此記錄下來。 根據官方文件，middleware 分為 Global middlewar
+slug: 2025-11-17-tsed-middleware
 ---
 
 之前的文章介紹過 Ts.ED，它是一個建構在 express.js 或是 koa.js 之上，並添加許多便利功能的 TypeScript 框架。最近在設定自訂 middleware 時，我發現了一個不錯的作法，特此記錄下來。

@@ -1,8 +1,8 @@
 ---
 title: Bulma的初體驗
 bgImageUrl: assets/images/30/30-0.jpg
-description: Bulma 確實是一個非常直觀且方便使用的 CSS 框架。它的開發者體驗（DX）優秀，對比 Bootstrap 有著更為簡潔的語法和設計。特別是在排版和元件設定方面，Bulma 可以來試試看
-published: true
+description: 最近對一款 CSS 框架 Bulma 產生了興趣，發現它的開發者體驗（DX）非常出色，使用起來比 Bootstrap 更直觀。前不久，它推出了 1.0 版本，因此我想撰寫一篇心得文，稍微介紹一下。 使用 要引用`Bulma`，最簡單的方式，就是在頁面上使用 CDN 連結。 ```html <link
+slug: 2024-07-14-firtst-step-bulma
 ---
 
 最近對一款 CSS 框架 - [Bulma](https://bulma.io/) 產生了興趣，發現它的開發者體驗（DX）非常出色，使用起來比 Bootstrap 更直觀。前不久，它推出了 1.0 版本，因此我想撰寫一篇心得文，稍微介紹一下。

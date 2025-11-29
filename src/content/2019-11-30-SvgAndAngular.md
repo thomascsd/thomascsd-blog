@@ -1,7 +1,8 @@
 ---
 title: SVG與Angular
 bgImageUrl: assets/images/13/13-0.jpg
-published: true
+slug: 2019-11-30-svg-and-angular
+description: 處理 SVG 已經是前端常常會遇到的事情，現在很多頁面上的圖片都是用 SVG 來取代，而 SVG 的優點這裡就不多述說。這邊提供我處理 SVG 的一些心得。 icon 資源 想要免費並且可以編輯的 icon 資源，我尋找了很久，最後發現iconify.design這個網站，它的 GitHub 星星數
 ---
 
 處理 SVG 已經是前端常常會遇到的事情，現在很多頁面上的圖片都是用 SVG 來取代，而 SVG 的優點這裡就不多述說。這邊提供我處理 SVG 的一些心得。

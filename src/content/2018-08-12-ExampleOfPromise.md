@@ -1,7 +1,8 @@
 ---
 title: 從範例講解Promise概念
 bgImageUrl: assets/images/06/06-0.jpg
-published: true
+slug: 2018-08-12-example-of-promise
+description: 一般而言，呼叫多個 ajax，最簡單的方式是用 callback 函式，如以下的範例 執行完 1 個 ajax 之後，再執行另一個 ajax。 <iframe width="100%" height="300" src="//jsfiddle.net/thomascsd/ut3cv27k/embed
 ---
 
 一般而言，呼叫多個 ajax，最簡單的方式是用 callback 函式，如以下的範例

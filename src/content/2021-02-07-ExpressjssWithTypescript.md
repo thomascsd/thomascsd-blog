@@ -1,7 +1,8 @@
 ---
 title: 使用TypeScript建立Express.js
 bgImageUrl: assets/images/18/18-0.png
-published: true
+slug: 2021-02-07-expressjss-with-typescript
+description: (2021-04-26 更新)service class 注入，@Inject 改為 @Service。 Express.js 是很受歡迎的 Node.js 框架，一般看來，比較少文章介紹使用 TypeScript 建立 Express.js，所以就想寫篇使用 TypeScript 建立 Expre
 ---
 
 (2021-04-26 更新)service class 注入，@Inject 改為 @Service。

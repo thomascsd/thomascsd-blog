@@ -1,7 +1,8 @@
 ---
 title: 6個推薦的Angular Library
 bgImageUrl: assets/images/15/15-0.jpg
-published: true
+slug: 2020-07-05-angular-library
+description: 除了一些有名的 Library 之外，例如：Angular material，還有一些不為人知的 Library，我平常都會對有興趣的 Angular Library，加上星星加以儲藏，其中有使用過，有些覺得很不錯的想推薦給大家。 1. ngx-loading <img class="img-res
 ---
 
 除了一些有名的 Library 之外，例如：Angular material，還有一些不為人知的 Library，我平常都會對有興趣的 Angular Library，加上星星加以儲藏，其中有使用過，有些覺得很不錯的想推薦給大家。
