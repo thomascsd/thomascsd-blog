@@ -1,28 +1,14 @@
 import { Component } from '@angular/core';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { LayoutComponent } from './layout';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterLink, RouterOutlet],
+  imports: [LayoutComponent],
   template: `
-    <nav>
-      <a routerLink="/">Home</a>
-    </nav>
-
-    <router-outlet />
+    <app-layout />
   `,
   styles: `
-    :host {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 2rem;
-      text-align: center;
-    }
-
-    nav {
-      text-align: left;
-      padding: 0 0 2rem 0;
-    }
+    :host { display: block; }
   `,
 })
 export class App {}
