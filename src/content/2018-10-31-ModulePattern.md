@@ -1,6 +1,6 @@
 ---
 title: 談談JavaScript Module part1
-bgImageUrl: assets/images/08/08-0.jpg
+bgImageUrl: /images/08/08-0.jpg
 slug: 2018-10-31-module-pattern
 description: 這次想談談模組(Module)，是 JavaScript 的設計模式的其中的一個，一般而言，我們都會希望程式有架構，被重覆使用，這時可以將程式分成一個個的模組，會用兩篇文章討論這個主題，這一篇是講述 Module pattern，下一篇會講述 ES2015 module。 Module patter
 ---
@@ -116,7 +116,7 @@ namespace NS {
 
 TypeScript 本身就有命名空間的關鍵字，與 Module pattern 的寫法很相似，差別在於最後是用 export 的方式，傳出所要公開的 function。
 
-<img class="img-responsive" loading="lazy" src="assets/images/08/08-1.png">
+<img class="img-responsive" loading="lazy" src="/images/08/08-1.png">
 
 並且我們發現，上面這段 TypeScript 轉成的 JavaScript（如上圖所示），與上節的 Module + Namespace 的程式碼很相似，也是先宣告全堿變數 NS，接著判斷 NS 是否已存在，之後將定義的模組設為 NS 的屬性。
 

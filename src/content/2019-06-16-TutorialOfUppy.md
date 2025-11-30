@@ -1,6 +1,6 @@
 ---
 title: Uppy - 最方便的上傳套件
-bgImageUrl: assets/images/11/11-0.jpg
+bgImageUrl: /images/11/11-0.jpg
 slug: 2019-06-16-tutorial-of-uppy
 description: 一直以來，我都覺得上傳檔案的程式開發，是表單處理中的痛點，一般的&lt;input type="file" />的功能比較簡略，介面不甚美觀。之前有發現 Uppy 這個套件，就對它感興趣，現在已經出了 1.0 版，想寫篇文章記錄一下心得。 這篇的文章的原始碼在這邊ngx-uppy-demo 安裝 `
 ---
@@ -108,7 +108,7 @@ uppy.on('upload-success', (file, response: any) => {
 
 XHRUpload 的參數可以參考[文件](https://uppy.io/docs/xhr-upload/)，`endpoint`指定 Server 端的 API 位置，並且是用監聽事件 upload-success 來判斷是否上傳成功。如此檔案或是圖片上傳的功能就完成。
 
-<img class="img-responsive" loading="lazy" src="assets/images/11/11-1.png">
+<img class="img-responsive" loading="lazy" src="/images/11/11-1.png">
 
 Dashboard 的畫面如上，因為 Uppy 是上傳套件，無法戴入圖片，所以這邊有使用另一個套件[ngx-gallery](https://github.com/MurhafSousli/ngx-gallery)。
 
@@ -144,7 +144,7 @@ uppy.on('upload-success', (file, response: any) => {
 - target('.uploadContainer')：FileInput 顯示在 uploadContainer 上。
 - inputName('fileData')：傳送至 Server 的名稱為 fileData。
 
-<img class="img-responsive" loading="lazy" src="assets/images/11/11-2.png">
+<img class="img-responsive" loading="lazy" src="/images/11/11-2.png">
 
 FileInput 的畫面如上。
 

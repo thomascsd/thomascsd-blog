@@ -1,6 +1,6 @@
 ---
 title: 使用TypeScript建立Express.js
-bgImageUrl: assets/images/18/18-0.png
+bgImageUrl: /images/18/18-0.png
 slug: 2021-02-07-expressjss-with-typescript
 description: (2021-04-26 更新)service class 注入，@Inject 改為 @Service。 Express.js 是很受歡迎的 Node.js 框架，一般看來，比較少文章介紹使用 TypeScript 建立 Express.js，所以就想寫篇使用 TypeScript 建立 Expre
 ---
@@ -118,7 +118,7 @@ tsconfig 設定有時候覺得很麻煩，有發現一個 npm package：[tsconfi
 
 Express.js 的架構比較自由、鬆散，沒有規定要如何建立，這讓本人困擾了一段時間，之後參考這篇[文章](https://www.coreycleary.me/project-structure-for-an-express-rest-api-when-there-is-no-standard-way/)，所以設定以下的目錄結構。
 
-<img class="img-responsive" loading="lazy" src="assets/images/18/18-1.png">
+<img class="img-responsive" loading="lazy" src="/images/18/18-1.png">
 
 要如何實作 controller 架構，之後有發現 [routing-controllers](https://github.com/typestack/routing-controllers)，可以與 Express.js 整合，輕鬆實作 controller 架構。
 
@@ -194,7 +194,7 @@ public setControllers() {
 
 因為每次都要設定 controller 覺得很麻煩，本人有[自定義 snippets](https://gist.github.com/thomascsd/19e1814f1b89c01588fa7f9f18540b20)，來減少一些重覆輸入的程式碼。
 
-<img class="img-responsive" loading="lazy" src="assets/images/18/18-2.gif">
+<img class="img-responsive" loading="lazy" src="/images/18/18-2.gif">
 
 ## 安全性
 

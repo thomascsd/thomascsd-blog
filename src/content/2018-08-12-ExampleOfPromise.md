@@ -1,6 +1,6 @@
 ---
 title: 從範例講解Promise概念
-bgImageUrl: assets/images/06/06-0.jpg
+bgImageUrl: /images/06/06-0.jpg
 slug: 2018-08-12-example-of-promise
 description: 一般而言，呼叫多個 ajax，最簡單的方式是用 callback 函式，如以下的範例 執行完 1 個 ajax 之後，再執行另一個 ajax。 <iframe width="100%" height="300" src="//jsfiddle.net/thomascsd/ut3cv27k/embed
 ---
@@ -12,7 +12,7 @@ description: 一般而言，呼叫多個 ajax，最簡單的方式是用 callbac
  
 但是這樣會造成維護及讀code都不易，容易產生俗稱callback hell的問題，每次都想到下面這張圖。
 
-<img class="img-responsive" loading="lazy" src="assets/images/06/06-1.png">
+<img class="img-responsive" loading="lazy" src="/images/06/06-1.png">
 
 所以有人想到 Promise 的解決方式
 

@@ -1,6 +1,6 @@
 ---
 title: 將AirTable做為資料庫的心得
-bgImageUrl: assets/images/19/19-0.jpg
+bgImageUrl: /images/19/19-0.jpg
 description: 當開始寫自已的 Side Project 時，常常遇到問題是，不知道要將資料寫入至那裡?最初是使用restdb，優點：很好串接，有 UI 介面很好設定，但是只能有 2 個免費的資料庫。 之後尋找了一些解決方案，發現AirTable符合我的需求。 優點： 有 UI 介面，可以很方便設定欄位。 欄位支援
 slug: 2021-04-24-airtable-as-database
 ---
@@ -19,11 +19,11 @@ slug: 2021-04-24-airtable-as-database
 
 首先要串接至 AirTable 需要 ApiKey ，可以參考[文件](https://support.airtable.com/hc/en-us/articles/219046777-How-do-I-get-my-API-key-)，接著取得 Base ID，如下圖所示，點選 Help > API documetation。
 
-<img class="img-responsive" loading="lazy" src="assets/images/19/19-01.png">
+<img class="img-responsive" loading="lazy" src="/images/19/19-01.png">
 
 在文件中就可以找到呼叫 API 時，需要的 Base ID。並且也可以看到官方的 JavaScript API client，但是我覺得官方的不好用，會使用其他的 Libary 來串接。
 
-<img class="img-responsive" loading="lazy" src="assets/images/19/19-02.png">
+<img class="img-responsive" loading="lazy" src="/images/19/19-02.png">
 
 ### 使用 API Client
 

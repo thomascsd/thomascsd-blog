@@ -1,6 +1,6 @@
 ---
 title: 談談JavaScript Module part2
-bgImageUrl: assets/images/08/08-0.jpg
+bgImageUrl: /images/08/08-0.jpg
 slug: 2018-12-23-module-pattern-part2
 description: '這篇會繼續上篇的主題：Module，這篇會講述 ES6（ES2015）Module 寫法，而上一篇是談談 JavaScript Module part1。 Module 建立 ```javascript export const message = ''Hello''; export function '
 ---
@@ -70,7 +70,7 @@ let module = await import('./my-module.js');
 
 ### 瀏覽器的支援
 
-<img class="img-responsive" loading="lazy" src="assets/images/09/09-1.png">
+<img class="img-responsive" loading="lazy" src="/images/09/09-1.png">
 
 根據 caniuse 的結果，現在全部的瀏覽器都有支援 ES2015 Module，可以不用使用 Webpack、Parcel 之類的 Module loader，直接使用原生語法就好了，但實務上還是需要 Webpack 之類的工具，幫忙將 js 打包、壓縮。
 

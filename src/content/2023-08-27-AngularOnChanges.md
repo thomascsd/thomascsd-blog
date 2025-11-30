@@ -1,6 +1,6 @@
 ---
 title: Angular判斷 DOM Render 是否完成
-bgImageUrl: assets/images/28/28-0.jpg
+bgImageUrl: /images/28/28-0.jpg
 description: 最近有遇到一個需求，是判斷頁面的捲軸是否到底，但有個不一様的點是會開啟 Dialog 後，才動態戴入內容再判斷捲軸是否到底，也就是需要判斷 DOM 是否 戴入完成，但碰到難題，Angular 並沒有像是 Vue.js 般有` $trick`方法，可以得知 Dom render 已完成。當查看 Sta
 slug: 2023-08-27-angular-on-changes
 ---

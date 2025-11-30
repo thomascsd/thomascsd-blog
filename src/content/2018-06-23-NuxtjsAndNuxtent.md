@@ -1,6 +1,6 @@
 ---
 title: 使用Nuxt.js及Nuxtent建立Blog的心得
-bgImageUrl: assets/images/05/05-0.jpg
+bgImageUrl: /images/05/05-0.jpg
 slug: 2018-06-23-nuxtjs-and-nuxtent
 description: Nuxt.js 是內建 SSR 的 vue.js 框架，我最感興趣的部份是可輸出靜態的 Html，如此就可以輕鬆的將程式部署至 GitHub Page 上，並且可以使用 module 來擴充功能。 當我看到了 Nuxtent 這個 module，它是可以取得 Markdown 內容的 module，
 ---
@@ -19,7 +19,7 @@ vue init nuxt-community/nuxtent-template my-site
 
 ## 網站架構
 
-<img class="img-responsive" loading="lazy" src="assets/images/05/05-1.png">
+<img class="img-responsive" loading="lazy" src="/images/05/05-1.png">
 
 ### page
 
@@ -179,15 +179,15 @@ export default {
 
 要注意的點是，第一次會顯示**Error:Comments Not Initialized**。
 
-<img class="img-responsive" loading="lazy" src="assets/images/05/05-5.png">
+<img class="img-responsive" loading="lazy" src="/images/05/05-5.png">
 
 需要登入自己的 Github 帳號後，啟動應用程式。
 
-<img class="img-responsive" loading="lazy" src="assets/images/05/05-6.png">
+<img class="img-responsive" loading="lazy" src="/images/05/05-6.png">
 
 成功之後，就會變成下圖
 
-<img class="img-responsive" loading="lazy" src="assets/images/05/05-7.png">
+<img class="img-responsive" loading="lazy" src="/images/05/05-7.png">
 
 ## 部署
 
@@ -195,7 +195,7 @@ export default {
 
 當使用 npm generate 時，卻會出現下列錯誤
 
-<img class="img-responsive" loading="lazy" src="assets/images/05/05-2.png">
+<img class="img-responsive" loading="lazy" src="/images/05/05-2.png">
 
 最後發現，使用下列步驟就 OK 了
 
@@ -203,11 +203,11 @@ export default {
 - baseUrl 設定成預設的 localhost:3200，並執行 npm generate
 - 再使用 VSCode 搜索 localhost:3200，即會發現 dist/api.js 內容有 baseURL:localhost:3200，然後將網址替換成正式環境，如我的 Blog 網址 thomascsd.github.io
 
-<img class="img-responsive" loading="lazy" src="assets/images/05/05-3.png">
+<img class="img-responsive" loading="lazy" src="/images/05/05-3.png">
 
 - 最後就可以部署至 GitHub page
 
-<img class="img-responsive" loading="lazy" src="assets/images/05/05-4.png">
+<img class="img-responsive" loading="lazy" src="/images/05/05-4.png">
 
 ## 結論
 

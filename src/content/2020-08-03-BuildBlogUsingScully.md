@@ -1,6 +1,6 @@
 ---
 title: 使用 Angular Static Generator - Scully 建立Blog的心得記錄
-bgImageUrl: assets/images/15/15-0.jpg
+bgImageUrl: /images/15/15-0.jpg
 slug: 2020-08-03-build-blog-using-scully
 description: 2022/09/09 更新：程式碼著色，改為 `prismjs` 一直以來 Angular 缺 Static Site Generator，像是 Vue.js 有 Nuxt.js，而 React.js 也有 Gatsby.js，終於 Angular 也出了 Static Site Generator
 ---
@@ -21,7 +21,7 @@ ng new blog-demo
 ng add @scullyio/init
 ```
 
-<img class="img-responsive" loading="lazy" src="assets/images/16/16-1.png">
+<img class="img-responsive" loading="lazy" src="/images/16/16-1.png">
 
 接著參考[官方文件](https://scully.io/docs/getting-started/)，輸入上方指令，將 Scully 加入 Angular 專案，並產生 scully.{your project}.config.ts。
 
@@ -31,7 +31,7 @@ ng generate @scullyio/init:blog
 
 再來就是建立 Blog 模組，輸入上列指命，就會產生基本的檔案。
 
-<img class="img-responsive" loading="lazy" src="assets/images/16/16-2.png">
+<img class="img-responsive" loading="lazy" src="/images/16/16-2.png">
 
 如上圖所示，主要會建立 Blog 目錄 - 存放 markdown 格式的文章，以及 BlogComponent - 顯示文章。這時再套上主題樣式就成為基本的 Blog 了。但是還要再加上下列的功能，才會是比較完整的 Blog。
 
@@ -51,7 +51,7 @@ export const config: ScullyConfig = {
 
 在 scully.{your project name}.config.ts 中加上以上的設定，設定`enableSyntaxHighlighting: true`啟用程式碼著色功能。
 
-<img class="img-responsive" loading="lazy" src="assets/images/16/16-3.png">
+<img class="img-responsive" loading="lazy" src="/images/16/16-3.png">
 
 但是只有設定到一半，因為 css 還沒戴入，所以程式碼就是預設的文字顏色。
 
@@ -67,7 +67,7 @@ npm install prismjs
 
 接著在 `style.css` 戴入樣式。
 
-<img class="img-responsive" loading="lazy" src="assets/images/16/16-5.png">
+<img class="img-responsive" loading="lazy" src="/images/16/16-5.png">
 
 這樣就 OK 了，程式碼有顏色了。
 
@@ -75,7 +75,7 @@ npm install prismjs
 
 一般說來，都希望在文章下方放置留言區塊，和讀者有互動，並且我想要比較簡單，可以與 GitHub issue 整合的，最後終於找到了[utterances](https://utteranc.es/)。
 
-<img class="img-responsive" loading="lazy" src="assets/images/16/16-6.png">
+<img class="img-responsive" loading="lazy" src="/images/16/16-6.png">
 
 按照網站上的步驟設定後，能將產生的 Script 放在想要顯示的地方，但是 script 放到 Angular html template 的話，script 會被過瀘掉，所以要動態插入 script。
 
@@ -111,7 +111,7 @@ export class BlogComponent implements OnInit {
 
 使用 renderer2 來動態產生 script 元素，最後插入想要顯示的地方。
 
-<img class="img-responsive" loading="lazy" src="assets/images/16/16-7.png">
+<img class="img-responsive" loading="lazy" src="/images/16/16-7.png">
 
 ## 分頁功能
 
@@ -159,7 +159,7 @@ export class BlogComponent implements OnInit {
 
 隨著文章愈來愈多，所以就會想要有分頁的功能，運用 Scully 現成的 API，就可以輕鬆實現。如上列的程式碼，使用`ScullyRoutesService`的`available$`即可取得目前可使用的文章路由物件。
 
-<img class="img-responsive" loading="lazy" src="assets/images/16/16-8.png">
+<img class="img-responsive" loading="lazy" src="/images/16/16-8.png">
 
 而所謂的可使用就是文章 markdown 設定`published: true`。接著使用 Array 的`slice`，就可以根據 QueryString 所傳入頁數來切割 Array。
 
@@ -171,7 +171,7 @@ export class BlogComponent implements OnInit {
 
 - watch：`npx scully --watch`，啟用 watch 模式，在開發階段很有幫助，可以立即看到修改的成果。
 
-<img class="img-responsive" loading="lazy" src="assets/images/16/16-9.png">
+<img class="img-responsive" loading="lazy" src="/images/16/16-9.png">
 
 - serve：`npx scully serve`，啟用 Scully Server，與`ng serve`相似，但不同點在於不會 build 專案。
 

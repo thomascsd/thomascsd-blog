@@ -50,7 +50,7 @@ description: 使用 Angular 後就迷上了 TypeScript，我有建立一個小�
 
 其實 VSCode 已經內建 Node.js 偵錯
 
-<img class="img-responsive" src="assets/images/03/03-1.png" loading="lazy" alt="nodejs debug">
+<img class="img-responsive" src="/images/03/03-1.png" loading="lazy" alt="nodejs debug">
 
 如上圖示所示，選擇「偵錯」>「新增組態」，再選擇「Node.js: 啟動程式」即可。
 
@@ -99,7 +99,7 @@ require('ts-node').register({
 
 按下 F5 或是綠色播放鍵即可進入偵錯模式，就很像 Visual Studio 偵錯.Net 的程式一樣。
 
-<img class="img-responsive" src="assets/images/03/03-2.png" loading="lazy" alt="ng debug">
+<img class="img-responsive" src="/images/03/03-2.png" loading="lazy" alt="ng debug">
 
 ## Angular 偵錯
 

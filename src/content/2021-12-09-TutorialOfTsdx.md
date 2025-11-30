@@ -1,6 +1,6 @@
 ---
 title: tsdx - 快速建立 npm 套件樣板的CLI工具
-bgImageUrl: assets/images/23/23-0.jpg
+bgImageUrl: /images/23/23-0.jpg
 description: 之前的文章使用 TypeScript 建立 Express.js，需要快速建立 npm 套件，所以在 GitHub 上尋找有沒有方便的套件，結果發現到了 tsdx，這個方便的 CLI 工具。 建立 ``` npx tsdx create mylib ``` 按照文件的說明，直接執行`npx tsdx
 slug: 2021-12-09-tutorial-of-tsdx
 ---
@@ -15,11 +15,11 @@ npx tsdx create mylib
 
 按照[文件](https://tsdx.io/)的說明，直接執行`npx tsdx create <package name>`，馬上建立好從開發、測試到部署全部都設定完成的樣版，節省了很多前期整合各種套件的時間。
 
-<img class="img-responsive" loading="lazy" src="assets/images/23/23-01.png">
+<img class="img-responsive" loading="lazy" src="/images/23/23-01.png">
 
 所選擇的樣板是 'basic'，會建立如下圖的目錄架構。
 
-<img class="img-responsive" loading="lazy" src="assets/images/23/23-02.png">
+<img class="img-responsive" loading="lazy" src="/images/23/23-02.png">
 
 ## 微調的項目
 
@@ -36,7 +36,7 @@ npx tsdx create mylib
 
 ## 測試
 
-<img class="img-responsive" loading="lazy" src="assets/images/23/23-03.png">
+<img class="img-responsive" loading="lazy" src="/images/23/23-03.png">
 
 測試方面是使用 Jest ，有 React 的背景的人，應該很多都有使用過，而這是我第一次使用 Jest 來進行測試。當測試執行完畢，會直接顯示詳細的測試資訊，如同上圖，這部份有讓我有點驚艷到，就連未測試的程式行數也會顯示。
 
@@ -57,11 +57,11 @@ module.exports = {
 
 建置是與 Rollup 整合，當執行`npm run build` ，也就會執行`tsdx build --target node`。
 
-<img class="img-responsive" loading="lazy" src="assets/images/23/23-05.png">
+<img class="img-responsive" loading="lazy" src="/images/23/23-05.png">
 
 這邊也是一段指令執行完，就會產生可以部署至 npm 的相關檔案，如大部份網站的慣列，預設是放在*dist*。
 
-<img class="img-responsive" loading="lazy" src="assets/images/23/23-04.png">
+<img class="img-responsive" loading="lazy" src="/images/23/23-04.png">
 
 ## 結論
 

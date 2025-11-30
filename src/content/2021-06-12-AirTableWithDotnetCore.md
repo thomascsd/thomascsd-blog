@@ -1,6 +1,6 @@
 ---
 title: 將AirTable做為資料庫的心得 - .NET Core 篇
-bgImageUrl: assets/images/20/20-0.jpg
+bgImageUrl: /images/20/20-0.jpg
 description: 我在上一篇的文章將 AirTable 做為資料庫的心得，有寫到：我為什麼使用 AirTable 當作資料庫，以及優、缺點，並且環境是 Node.js ，語言是 TypeScript ，而這次想要使用 .NET Core 、 C來改寫。 串接 AirTable <img class="img-resp
 slug: 2021-06-12-air-table-with-dotnet-core
 ---
@@ -9,7 +9,7 @@ slug: 2021-06-12-air-table-with-dotnet-core
 
 ## 串接 AirTable
 
-<img class="img-responsive" loading="lazy" src="assets/images/20/20-01.png">
+<img class="img-responsive" loading="lazy" src="/images/20/20-01.png">
 
 串接 AirTable 所需要的 APIKey、BaseID，可以參考的上一篇的文章，而連結 AirtTable 使用的套件是 [airtable.net](https://github.com/ngocnicholas/airtable.net) ，並且使用 Nuget 安裝即可。
 
@@ -93,7 +93,7 @@ public async Task<IEnumerable<T>> GetDatas<T>(string baseId, string tableName) w
 
 再來使用 `Select` 方法轉換物件，取得屬性 `Fields` ，並且將由 AirTable 自動產生的 `Id` 鍵值保存下來。
 
-<img class="img-responsive" loading="lazy" src="assets/images/20/20-02.png">
+<img class="img-responsive" loading="lazy" src="/images/20/20-02.png">
 
 最後使用 Postman 測試，Response 的結果如上圖所示，而 `id` 就是 AirtTable 自動產生的 `Id` 鍵值。
 

@@ -1,6 +1,6 @@
 ---
 title: 我的Terminal 設定方式 - Windows Terminal & ohmyposh
-bgImageUrl: assets/images/24/24-0.jpg
+bgImageUrl: /images/24/24-0.jpg
 description: 一直以來都是使用 IDE 來開發程式，自從進入前端世界後，開始很常使用 CLI ，而 Windows 的 terminal 一直不是很好使用，直到 Windows Terminal 的出現。 Windows Terminal 整合 cmd、PowerShell，並可 以自定樣式，但是還是希望和 oh
 slug: 2022-05-20-window-teminal-and-oh-my-posh
 ---
@@ -35,7 +35,7 @@ ohmyposh 是跨平台的套件，而我是使用 Windows ，所以是選擇 scoo
 scoop install https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/oh-my-posh.json
 ```
 
-<img class="img-responsive" loading="lazy" src="assets/images/24/24-01.png">
+<img class="img-responsive" loading="lazy" src="/images/24/24-01.png">
 
 接下來需要進行[設定](https://ohmyposh.dev/docs/installation/prompt)，當啟動 Windows Terminal 時，自動戴入 ohmyposh。
 
@@ -45,7 +45,7 @@ scoop install https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/downl
 
 接下來輸入指令`note $PROFILE`，如下圖，在 Microsoft.PowerShell_profile.ps1 裡 加上指令 oh-my-posh init pwsh | Invoke-Expression。
 
-<img class="img-responsive" loading="lazy" src="assets/images/24/24-02.png">
+<img class="img-responsive" loading="lazy" src="/images/24/24-02.png">
 
 存檔後重啟即可。
 
@@ -53,7 +53,7 @@ scoop install https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/downl
 
 因為預設的字型是 Nerd Fonts，所以會發現一些圖示沒有顯示正常，需下戴[字型](https://ohmyposh.dev/docs/configuration/fonts)來安裝 。
 
-<img class="img-responsive" loading="lazy" src="assets/images/24/24-03.png">
+<img class="img-responsive" loading="lazy" src="/images/24/24-03.png">
 
 Windows terminal 還需將字型設為 MesloLGM NF。
 
@@ -75,13 +75,13 @@ Windows terminal 還需將字型設為 MesloLGM NF。
 
 可以顯示正確的字型。
 
-<img class="img-responsive" loading="lazy" src="assets/images/24/24-04.png">
+<img class="img-responsive" loading="lazy" src="/images/24/24-04.png">
 
 ## 主題
 
 預設的主題比較單調，可以自定樣式或是戴入其他人建立好的[主題](https://ohmyposh.dev/docs/themes)，第一步輸入`Get-PoshThemes` 如果初次使用沒有指定目錄的話，會決定主題要存放的位置，不然會顯示目前已下戴的主題。
 
-<img class="img-responsive" loading="lazy" src="assets/images/24/24-05.png">
+<img class="img-responsive" loading="lazy" src="/images/24/24-05.png">
 
 目前選擇的主題是[slim](https://ohmyposh.dev/docs/themes#slim)，這個主題有包含 Node.js 的版本，和顯示 GIT 的狀態，都是開發上所必要的資訊。之此之外，調整 Profile，加上`--config`參數指定主題，之後重新戴入即可。
 
@@ -89,7 +89,7 @@ Windows terminal 還需將字型設為 MesloLGM NF。
 oh-my-posh init pwsh --config D:\themes\slim.omp.json | Invoke-Expression
 ```
 
-<img class="img-responsive" loading="lazy" src="assets/images/24/24-06.png">
+<img class="img-responsive" loading="lazy" src="/images/24/24-06.png">
 
 ## 結論
 

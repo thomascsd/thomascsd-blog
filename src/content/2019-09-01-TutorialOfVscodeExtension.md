@@ -1,6 +1,6 @@
 ---
 title: VSCode Extension的開發心得
-bgImageUrl: assets/images/12/12-0.jpg
+bgImageUrl: /images/12/12-0.jpg
 slug: 2019-09-01-tutorial-of-vscode-extension
 description: '[2020/08/29 更新：加上 package.json 的設定] 前一陣子，開發了產生 README.md 的 VSCode Readme Pattern，如何大家還沒安裝的話，可以試試看。在開發中，有遇到一些問題，以及累積了一些心得，分享給的大家。 初始 首先按照官方文件，需要先安裝Yeom'
 ---
@@ -19,9 +19,9 @@ npm install -g yo generator-code
 
 輸入`yo code`，來初始化 VSCode extesion 專案，接著輸入一些參數，這邊我是用 TypeScript 開發的，接著輸入一些參數後，就可以很輕易的建立一個樣板。
 
-<img class="img-responsive" loading="lazy" src="assets/images/12/12-1.png">
+<img class="img-responsive" loading="lazy" src="/images/12/12-1.png">
 
-<img class="img-responsive" loading="lazy" src="assets/images/12/12-2.png">
+<img class="img-responsive" loading="lazy" src="/images/12/12-2.png">
 
 ## package.json 的設定
 
@@ -85,7 +85,7 @@ if (folders) {
 
 ### 建立項目清單
 
-<img class="img-responsive" loading="lazy" src="assets/images/12/12-3.png">
+<img class="img-responsive" loading="lazy" src="/images/12/12-3.png">
 
 如上圖，有時會需要讓人選擇，可以使用下列 API 來顯示選項：
 

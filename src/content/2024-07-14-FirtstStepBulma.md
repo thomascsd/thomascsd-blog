@@ -1,6 +1,6 @@
 ---
 title: Bulma的初體驗
-bgImageUrl: assets/images/30/30-0.jpg
+bgImageUrl: /images/30/30-0.jpg
 description: 最近對一款 CSS 框架 Bulma 產生了興趣，發現它的開發者體驗（DX）非常出色，使用起來比 Bootstrap 更直觀。前不久，它推出了 1.0 版本，因此我想撰寫一篇心得文，稍微介紹一下。 使用 要引用`Bulma`，最簡單的方式，就是在頁面上使用 CDN 連結。 ```html <link
 slug: 2024-07-14-firtst-step-bulma
 ---
@@ -34,7 +34,7 @@ slug: 2024-07-14-firtst-step-bulma
 </div>
 ```
 
-<img class="img-responsive" loading="lazy" src="assets/images/30/30-1.png">
+<img class="img-responsive" loading="lazy" src="/images/30/30-1.png">
 
 如上圖，預設是左右均分，看起來會有點跑版
 
@@ -49,7 +49,7 @@ slug: 2024-07-14-firtst-step-bulma
 </div>
 ```
 
-<img class="img-responsive" loading="lazy" src="assets/images/30/30-2.png">
+<img class="img-responsive" loading="lazy" src="/images/30/30-2.png">
 
 一樣也是有 [12 columns system](https://bulma.io/documentation/columns/sizes/#12-columns-system)，我這邊就設定 `is-8` ，將寬度設寬。
 
@@ -103,11 +103,11 @@ slug: 2024-07-14-firtst-step-bulma
 
 Bulma 有蠻多的資源可以參考，雖然沒有像 Bootstrap 這麼龎大，我覺得還是有不少的資源。
 
-<img class="img-responsive" loading="lazy" src="assets/images/30/30-3.png">
+<img class="img-responsive" loading="lazy" src="/images/30/30-3.png">
 
 - [Free Bulma Templates](https://bulmatemplates.github.io/bulma-templates/)：蠻多的免費板型可以使用，其中的[Blog 2 - Tailsaw](https://bulmatemplates.github.io/bulma-templates/templates/blog-tailsaw.html)就是我所使用的版型。
 
-<img class="img-responsive" loading="lazy" src="assets/images/30/30-4.png">
+<img class="img-responsive" loading="lazy" src="/images/30/30-4.png">
 
 - [Awesome Bulma](https://github.com/aldi/awesome-bulma)：大家都熟悉的 Awesome 系例，各個資源的集合。
 

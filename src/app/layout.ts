@@ -9,7 +9,6 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
     <header>
       <div class="nav-wrap">
         <nav aria-label="Primary">
-          <a routerLink="/" routerLinkActive="active" aria-current="page">Home</a>
           <a routerLink="/" routerLinkActive="active">Blog</a>
           <a routerLink="/about" routerLinkActive="active">About</a>
           <button type="button" class="theme-toggle" (click)="toggleTheme()" [attr.aria-pressed]="isDark() ? 'true' : 'false'">
@@ -114,7 +113,7 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
       width: 100%;
       max-width: 900px;
       margin: 0 auto;
-      padding: 2.5rem 1rem 2rem 1rem;
+      padding: 0 1rem 2rem 1rem;
       display: flex;
       flex-direction: column;
       align-items: center;

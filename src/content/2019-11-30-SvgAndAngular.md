@@ -1,6 +1,6 @@
 ---
 title: SVG與Angular
-bgImageUrl: assets/images/13/13-0.jpg
+bgImageUrl: /images/13/13-0.jpg
 slug: 2019-11-30-svg-and-angular
 description: 處理 SVG 已經是前端常常會遇到的事情，現在很多頁面上的圖片都是用 SVG 來取代，而 SVG 的優點這裡就不多述說。這邊提供我處理 SVG 的一些心得。 icon 資源 想要免費並且可以編輯的 icon 資源，我尋找了很久，最後發現iconify.design這個網站，它的 GitHub 星星數
 ---
@@ -11,15 +11,15 @@ description: 處理 SVG 已經是前端常常會遇到的事情，現在很多�
 
 想要免費並且可以編輯的 icon 資源，我尋找了很久，最後發現[iconify.design](https://iconify.design/)這個網站，它的 GitHub 星星數雖不是很多，但很符合我的需求。
 
-<img class="img-responsive" loading="lazy" src="assets/images/13/13-01.png">
+<img class="img-responsive" loading="lazy" src="/images/13/13-01.png">
 
 例如搜索「search」會出現很多相關的 icon。
 
-<img class="img-responsive" loading="lazy" src="assets/images/13/13-02.png">
+<img class="img-responsive" loading="lazy" src="/images/13/13-02.png">
 
 當選擇所想要的 icon 時，可以使用 HTML 來呈現
 
-<img class="img-responsive" loading="lazy" src="assets/images/13/13-03.png">
+<img class="img-responsive" loading="lazy" src="/images/13/13-03.png">
 
 或是使用原始的 SVG 來呈現也可以，我個人是比較喜歡用原始的 SVG 來呈現，如此可進行一些客制化操作。
 
@@ -35,7 +35,7 @@ AngularV8.0 之後支援`tempalteUrl`可以是 SVG，而不用是 HTML。可以�
 
 ## 實現 hover
 
-<img class="img-responsive" loading="lazy" src="assets/images/13/13-04.gif">
+<img class="img-responsive" loading="lazy" src="/images/13/13-04.gif">
 
 有時會需要 hover 時改變 SVG 背景顏色，就像上圖所示。
 

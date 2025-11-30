@@ -1,6 +1,6 @@
 ---
 title: Angular TypeForm - 強型別Form的心得
-bgImageUrl: assets/images/25/25-0.jpg
+bgImageUrl: /images/25/25-0.jpg
 description: 2024-11-10 更新：增加 FormBuild.group 和 class-validator 的程式說明 <hr 在 Angular v14 中最重要的 2 個功能，除了 Single Component 之外，就是 Typeform 了，而 Typeform 也就是在建立 Form 功能時
 slug: 2022-09-08-angular-typeform
 ---
@@ -12,7 +12,7 @@ slug: 2022-09-08-angular-typeform
 在 Angular v14 中最重要的 2 個功能，除了 Single Component 之外，就是 Typeform 了，而 Typeform 也就是在建立 Form 功能時，終於可以套用型別，方便開發及除錯，是期待很久的功能。
 查詢[官方文件](https://angular.tw/guide/typed-forms)可以發現，範列都是使用從建立 `FormGroup`，再建立 'FormControl' 的方式。
 
-<img class="img-responsive" loading="lazy" src="assets/images/25/25-01.png">
+<img class="img-responsive" loading="lazy" src="/images/25/25-01.png">
 
 本人還是比較偏好用 `FormBuilder` 來建立 FormGroup，所以分享一下用 `FromBuilder` 建立的心得。
 
@@ -247,7 +247,7 @@ this.group = this.fb.group({
 
 而如果有錯誤的話，固定回傳格式為 `{ hasError: true, message }`，所以頁面上只需判斷 `hasError === true`即可。
 
-<img class="img-responsive" loading="lazy" src="assets/images/25/25-02.png">
+<img class="img-responsive" loading="lazy" src="/images/25/25-02.png">
 
 並且因為是強型別的關系，在 html 上也有程式碼提示的幫助。
 

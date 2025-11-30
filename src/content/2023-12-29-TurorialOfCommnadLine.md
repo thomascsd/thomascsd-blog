@@ -1,6 +1,6 @@
 ---
 title: .NET 好用套件 - commandline
-bgImageUrl: assets/images/29/29-0.jpeg
+bgImageUrl: /images/29/29-0.jpeg
 description: 在.NET Framework 的時候，沒有內建的 CLI 指令參數解析，再到.NET Core 時，雖然有個套件System.CommandLine，但覺得沒有很好使用，之前有發現一個套件 commandline，設定及讀取參考很簡單易用，寫篇心得文分享一下。 設定 ```csharp publi
 slug: 2023-12-29-turorial-of-commnad-line
 ---
@@ -41,13 +41,13 @@ await Parser.Default.ParseArguments<DefaultOptions>(args).WithParsedAsync(RunJob
 
 使用`ParseArguments` 及 `WithParsedAsync`來解析參數，並取得 options 物件，也是很淺顯易懂的。
 
-<img class="img-responsive" loading="lazy" src="assets/images/29/29-1.png">
+<img class="img-responsive" loading="lazy" src="/images/29/29-1.png">
 
 接著就可以使用熟悉的 [unix style](https://github.com/commandlineparser/commandline/wiki/CommandLine-Grammar) 方式設定參數來執行。
 
 ## 另一種方式
 
-<img class="img-responsive" loading="lazy" src="assets/images/29/29-2.png">
+<img class="img-responsive" loading="lazy" src="/images/29/29-2.png">
 
 有時會需要根據不同的參數，取得不同的 Options 物件。看了一下原始檔，發現 `ParseArguments` 還有另一個多戴方法，可傳入 factory 工廠方式，來決定傳出的 Options 物件。
 
@@ -83,7 +83,7 @@ Func<DefaultOptions> SelectOptions(string[] args)
 }
 ```
 
-<img class="img-responsive" loading="lazy" src="assets/images/29/29-3.png">
+<img class="img-responsive" loading="lazy" src="/images/29/29-3.png">
 
 如同上面的程式碼，可以根據不同名稱，取回不同的 options 物件，例如名稱(-n/--name)為 action 時，可以多傳入參數 action。
 

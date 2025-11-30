@@ -1,6 +1,6 @@
 ---
 title: 使用TypeScript建立Express.js-使用Ts.ED
-bgImageUrl: assets/images/27/27-0.jpg
+bgImageUrl: /images/27/27-0.jpg
 description: 之前有寫過一篇文章使用 TypeScript 建立 Express.js，介紹了 routing-controllers，可以將 `TypeScipt` 與 `Express.js`整合，並使用 Controller 的方式建立 `Express.js`，然而發現套件更新有點緩慢，最近在該專案的Gi
 slug: 2023-05-24-expressjs-typescript-tsed
 ---
@@ -16,11 +16,11 @@ tsed init .
 
 參考[Getting started](https://tsed.io/getting-started/)，首先安裝 CLI 工具，再初始化專案。
 
-<img class="img-responsive" loading="lazy" src="assets/images/27/27-01.png">
+<img class="img-responsive" loading="lazy" src="/images/27/27-01.png">
 
 TS.ed 本身會與一些套件整合，可以勾選想要整合的功能，一般的選擇是 Testing、Linter、Swagger。
 
-<img class="img-responsive" loading="lazy" src="assets/images/27/27-02.png">
+<img class="img-responsive" loading="lazy" src="/images/27/27-02.png">
 
 接著等待安裝完相依性的套件之後，就可以開啟專案開發了。
 另外因為覺得[文件](https://tsed.io/docs/configuration.html)寫得有點分散，所以這篇文章會大致說明一下，從設定 Server，再到建立 Controller，最後建立 Service 的步驟。
@@ -155,7 +155,7 @@ export class ForecastService {
 
 ## 啟動
 
-<img class="img-responsive" loading="lazy" src="assets/images/27/27-03.png">
+<img class="img-responsive" loading="lazy" src="/images/27/27-03.png">
 
 ```json
 "scripts": {
