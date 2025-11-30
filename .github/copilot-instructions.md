@@ -42,4 +42,12 @@
   - Node 版本限制（見 `package.json.engines`），請確保 CI 與本地環境相符。
   - Vite 插件 `vite-tsconfig-paths` 已加入，請維持 `tsconfig` 路徑一致性。
 
-如需我把這些指引再精簡成英文或補上更多實例（例如新增具體 `about.page.ts` 的樣板程式碼、或一個 `content` 文章的完整 markdown 範例），請告知想要的範例類型。歡迎指出哪些區段需要更詳細或不正確的地方。
+- **風格指南**: 請遵循 TypeScript 與 Angular 最佳實踐指南（見 `.github/instructions/angular-bestpractice.instructions.md`）。
+
+- **其他資源**:
+  - Analog 官方文件: https://analogjs.org/docs
+  - Angular 官方文件: https://angular.io/docs
+  - Vite 官方文件: https://vitejs.dev/guide/
+  - Vitest 官方文件: https://vitest.dev/guide/
+
+- 建立 Angular component 時，html 模板與 css 樣式請盡量內聯（inline），除非內容過長或需要特殊處理，才使用外部檔案。
