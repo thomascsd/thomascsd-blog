@@ -4,6 +4,9 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 @Component({
   selector: 'app-layout',
   imports: [RouterLink, RouterLinkActive, RouterOutlet],
+  host: {
+    '[attr.data-theme]': 'theme()'
+  },
   template: `
 
     <header>
@@ -135,7 +138,7 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 })
 export class LayoutComponent {
   year = new Date().getFullYear();
-  private theme = signal<'light' | 'dark'>('light');
+  theme = signal<'light' | 'dark'>('light');
 
   isDark() {
     return this.theme() === 'dark';
@@ -144,7 +147,5 @@ export class LayoutComponent {
   toggleTheme() {
     const next = this.isDark() ? 'light' : 'dark';
     this.theme.set(next);
-    const host = (document.querySelector('app-root') as HTMLElement) ?? document.body;
-    host.setAttribute('data-theme', next);
   }
 }
