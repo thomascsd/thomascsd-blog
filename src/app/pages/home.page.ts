@@ -8,15 +8,17 @@ import PostAttributes from '../post-attributes';
   selector: 'app-home',
   imports: [NgOptimizedImage, RouterLink],
   template: `
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero__media">
-        <img ngSrc="/images/bgBlog.png" width="1200" height="400" alt="Blog banner image" priority />
-      </div>
-      <div class="hero__content">
-        <h1 id="hero-title">簡約現代的技術部落格</h1>
-        <p class="muted">分享程式設計、工具與開發心得，保持持續學習。</p>
-      </div>
-    </section>
+    <div class="hero-fullwidth">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__media">
+          <img ngSrc="/images/bgBlog.png" width="1200" height="400" alt="Blog banner image" priority />
+        </div>
+      </section>
+    </div>
+    <div class="hero__content">
+      <h1 id="hero-title">簡約現代的技術部落格</h1>
+      <p class="muted">分享程式設計、工具與開發心得，保持持續學習。</p>
+    </div>
 
     <section aria-labelledby="articles-title">
       <h2 id="articles-title">全部文章</h2>
@@ -38,33 +40,41 @@ import PostAttributes from '../post-attributes';
 
     .muted { color: var(--muted); }
 
+    .hero-fullwidth {
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      margin-bottom: 2rem;
+    }
 
     .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 2rem;
-      margin-bottom: 2.5rem;
+      width: 100%;
     }
 
     .hero__media {
       width: 100%;
-      max-width: 1100px;
-      margin: 0 auto;
       display: flex;
-      flex-direction: column;
-      align-items: center;
     }
 
     .hero__media img {
       width: 100%;
-      max-width: 1100px;
       height: auto;
-      aspect-ratio: 11/4;
-      border-radius: 18px;
-      border: 1px solid var(--border);
+      aspect-ratio: 16/5;
       object-fit: cover;
-      box-shadow: 0 4px 32px 0 rgb(0 0 0 / 7%);
+      display: block;
+    }
+
+    .hero__content {
+      text-align: center;
+      margin-bottom: 2.5rem;
+      padding: 0 1rem;
+    }
+
+    .hero__content h1 {
+      margin: 0 0 0.5rem;
     }
 
 
@@ -90,20 +100,14 @@ import PostAttributes from '../post-attributes';
     .post__desc { margin: 0; color: var(--muted); }
 
     @media (min-width: 768px) {
-      .hero {
-        flex-direction: column;
-        gap: 2.5rem;
-      }
       .hero__media img {
-        max-width: 1100px;
-        aspect-ratio: 11/4;
+        aspect-ratio: 16/5;
       }
     }
 
     @media (max-width: 600px) {
       .hero__media img {
-        max-width: 100vw;
-        aspect-ratio: 16/9;
+        aspect-ratio: 16/7;
       }
     }
   `,
