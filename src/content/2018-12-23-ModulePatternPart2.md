@@ -3,6 +3,7 @@ title: 談談JavaScript Module part2
 bgImageUrl: /images/08/08-0.jpg
 slug: 2018-12-23-module-pattern-part2
 description: '這篇會繼續上篇的主題：Module，這篇會講述 ES6（ES2015）Module 寫法，而上一篇是談談 JavaScript Module part1。 Module 建立 ```javascript export const message = ''Hello''; export function '
+tags: []
 ---
 
 這篇會繼續上篇的主題：Module，這篇會講述 ES6（ES2015）Module 寫法，而上一篇是[談談 JavaScript Module part1](https://thomascsd.github.io/blog/2018-10-31-ModulePattern)。

@@ -2,6 +2,7 @@
 title: 使用Jekyll建立Blog -1
 slug: 2017-07-13-build-blog-with-jekyll
 description: 建立 Blog 的工具有很多，但是可以一鍵馬上完成架站及能夠完全客制化的工具就不多了，其中一個就是Jekyll。 但是 Jekyll 需要在本機安裝 Ruby 環境，這樣還是有點麻煩，還要先設定環境，之後我找到一個很方便的工具Jekyll-now，只要 Fork 就可以建立一個網站。 1.到Jeky
+tags: []
 ---
 
 建立 Blog 的工具有很多，但是可以一鍵馬上完成架站及能夠完全客制化的工具就不多了，其中一個就是[Jekyll](https://jekyllrb.com)。

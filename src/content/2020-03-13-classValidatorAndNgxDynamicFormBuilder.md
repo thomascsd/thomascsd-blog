@@ -2,6 +2,7 @@
 title: class-validator & ngx-dynamic-form-builder
 slug: 2020-03-13-class-validator-and-ngx-dynamic-form-builder
 description: 資料驗證是常常碰到的議題，一般說來，前端及後端都要驗證，但常常是前端驗證要寫一套，後端又要寫另一套，不太能共用。JavaScript 的世界也是如此，都會做重工。之前發現套件class-validator，使用 decorator 來設定要驗證的項目，並且是用 Angular 的話，搭配使用ngx-
+tags: []
 ---
 
 資料驗證是常常碰到的議題，一般說來，前端及後端都要驗證，但常常是前端驗證要寫一套，後端又要寫另一套，不太能共用。JavaScript 的世界也是如此，都會做重工。之前發現套件[class-validator](https://github.com/typestack/class-validator)，使用 decorator 來設定要驗證的項目，並且是用 Angular 的話，搭配使用[ngx-dynamic-form-builder](https://github.com/EndyKaufman/ngx-dynamic-form-builder)即可進行表單驗證，而在 node.js 也可使用。

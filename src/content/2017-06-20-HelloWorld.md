@@ -2,6 +2,7 @@
 title: Hello World!
 slug: 2017-06-20-hello-world
 description: 第一篇文章，談談為什麼想寫 Blog，有兩個原因： 第一是 ITHome 有個鐵人幫幫忙的活動，其中有人說工程師就是要建 Blog，所以開始建立自己的 Blog，順便練習 Angular。 第二點是看了我為什麼鼓勵工程師寫 blog | In 91，想說寫程式這樣久，也有些心得可以分享，並且也可當成
+tags: []
 ---
 
 第一篇文章，談談為什麼想寫 Blog，有兩個原因：

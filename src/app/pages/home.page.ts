@@ -30,6 +30,13 @@ import PostAttributes from '../post-attributes';
             </h2>
             <div class="post__date">{{ getDateFromSlug(post.attributes.slug) }}</div>
             <p class="post__desc">{{ post.attributes.description }}</p>
+            @if (post.attributes.tags?.length) {
+              <div class="post__tags">
+                @for (tag of post.attributes.tags; track tag) {
+                  <a [routerLink]="['/tags', tag]" class="tag">{{ formatTag(tag) }}</a>
+                }
+              </div>
+            }
           </article>
         }
       </div>
@@ -98,6 +105,25 @@ import PostAttributes from '../post-attributes';
       margin-left: 0.1em;
     }
     .post__desc { margin: 0; color: var(--muted); }
+    .post__tags {
+      margin-top: 1rem;
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .tag {
+      font-size: 0.9rem;
+      padding: 0.2rem 0.6rem;
+      background-color: var(--border);
+      border-radius: 4px;
+      text-decoration: none;
+      color: var(--text);
+      transition: background-color 0.2s;
+    }
+    .tag:hover {
+      background-color: var(--muted);
+      color: white;
+    }
 
     @media (min-width: 768px) {
       .hero__media img {
@@ -129,5 +155,9 @@ export default class HomePage {
     const m = slug.match(/^(\d{4})-(\d{2})-(\d{2})/);
     if (!m) return '';
     return `${m[1]}-${m[2]}-${m[3]}`;
+  }
+
+  formatTag(tag: string): string {
+    return tag.charAt(0).toUpperCase() + tag.slice(1).replace(/-/g, ' ');
   }
 }

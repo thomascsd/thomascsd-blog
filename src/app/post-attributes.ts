@@ -3,4 +3,5 @@ export default interface PostAttributes {
   slug: string;
   description: string;
   bgImageUrl: string;
+  tags: string[];
 }

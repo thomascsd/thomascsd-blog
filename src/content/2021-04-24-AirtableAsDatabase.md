@@ -3,6 +3,7 @@ title: 將AirTable做為資料庫的心得
 bgImageUrl: /images/19/19-0.jpg
 description: 當開始寫自已的 Side Project 時，常常遇到問題是，不知道要將資料寫入至那裡?最初是使用restdb，優點：很好串接，有 UI 介面很好設定，但是只能有 2 個免費的資料庫。 之後尋找了一些解決方案，發現AirTable符合我的需求。 優點： 有 UI 介面，可以很方便設定欄位。 欄位支援
 slug: 2021-04-24-airtable-as-database
+tags: []
 ---
 
 當開始寫自已的 Side Project 時，常常遇到問題是，不知道要將資料寫入至那裡?最初是使用[restdb](https://restdb.io/)，優點：很好串接，有 UI 介面很好設定，但是只能有 2 個免費的資料庫。

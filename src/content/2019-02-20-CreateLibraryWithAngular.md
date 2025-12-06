@@ -3,6 +3,7 @@ title: 於Angular中，建立Library的心得
 bgImageUrl: /images/10/10-0.jpg
 slug: 2019-02-20-create-library-with-angular
 description: 在 Angular CLI 6.0 以上就可以直接建立 Library，而 Library 的用途可以將自已建立的元件發佈至 NPM，或是專案一些共同的元件拆分出去。 建立 Library ``` ng new ngx-lib-demo ng g library shared-comp ``` 先使
+tags: ["angular"]
 ---
 
 在 Angular CLI 6.0 以上就可以直接建立 Library，而 Library 的用途可以將自已建立的元件發佈至 NPM，或是專案一些共同的元件拆分出去。

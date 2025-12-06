@@ -3,6 +3,7 @@ title: 使用 Angular Static Generator - Scully 建立Blog的心得記錄
 bgImageUrl: /images/15/15-0.jpg
 slug: 2020-08-03-build-blog-using-scully
 description: 2022/09/09 更新：程式碼著色，改為 `prismjs` 一直以來 Angular 缺 Static Site Generator，像是 Vue.js 有 Nuxt.js，而 React.js 也有 Gatsby.js，終於 Angular 也出了 Static Site Generator
+tags: []
 ---
 
 2022/09/09 更新：程式碼著色，改為 `prismjs`

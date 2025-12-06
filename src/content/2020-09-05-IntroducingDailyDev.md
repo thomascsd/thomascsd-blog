@@ -3,6 +3,7 @@ title: daily.dev - 整合各個技術文章的好用套件
 bgImageUrl: /images/17/17-0.jpg
 description: 2025/03/16 重新改寫 我常常早上都會看一些技術文章，最近這幾年都是使用daily.dev 來閱讀文章。這個網站結合了各類文章，不只有網站，還有 Android 及 IOS 的 APP 可以使用，分享給大家參考看看。 <img class="img-responsive" loading="
 slug: 2020-09-05-introducing-daily-dev
+tags: []
 ---
 
 2025/03/16 重新改寫

@@ -2,6 +2,7 @@
 title: 使用VSCode偵錯Node.js及Angular的小技巧
 slug: 2017-12-23-vscode-debug-for-nodejs-andn-agular
 description: 使用 Angular 後就迷上了 TypeScript，我有建立一個小專案叫做angular-express-starter，Server 及 Client 端都是使用 TypeScript 建立的，而 Client 端是使用 Angular CLI，然後 Server 端是使用 Express.j
+tags: ["vscode", "javascript", "nodejs"]
 ---
 
 使用 Angular 後就迷上了 TypeScript，我有建立一個小專案叫做[angular-express-starter](https://github.com/thomascsd/angular-express-starter)，Server 及 Client 端都是使用 TypeScript 建立的，而 Client 端是使用 Angular CLI，然後 Server 端是使用 Express.js。
