@@ -37,6 +37,7 @@ import PostAttributes from '../post-attributes';
                 }
               </div>
             }
+            <a [routerLink]="['/blog', post.attributes.slug]" class="read-more">Read More →</a>
           </article>
         }
       </div>
@@ -98,6 +99,14 @@ import PostAttributes from '../post-attributes';
       font-weight: 700;
       line-height: 1.18;
     }
+    .post__title a {
+      color: var(--text);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .post__title a:hover {
+      color: var(--link);
+    }
     .post__date {
       color: var(--muted);
       font-size: 1.15rem;
@@ -123,6 +132,17 @@ import PostAttributes from '../post-attributes';
     .tag:hover {
       background-color: var(--muted);
       color: white;
+    }
+
+    .read-more {
+      display: inline-block;
+      margin-top: 1rem;
+      color: var(--link);
+      font-weight: 500;
+      text-decoration: none;
+    }
+    .read-more:hover {
+      text-decoration: underline;
     }
 
     @media (min-width: 768px) {

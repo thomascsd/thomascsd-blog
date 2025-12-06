@@ -13,6 +13,7 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
       <div class="nav-wrap">
         <nav aria-label="Primary">
           <a routerLink="/" routerLinkActive="active">Blog</a>
+          <a routerLink="/tags" routerLinkActive="active">Tags</a>
           <a routerLink="/about" routerLinkActive="active">About</a>
           <button type="button" class="theme-toggle" (click)="toggleTheme()" [attr.aria-pressed]="isDark() ? 'true' : 'false'">
             {{ isDark() ? 'Dark' : 'Light' }}
