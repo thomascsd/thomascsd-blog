@@ -1,7 +1,7 @@
 /// <reference types="vitest" />
 
 import { defineConfig } from 'vite';
-import analog from '@analogjs/platform';
+import analog, { type PrerenderContentFile } from '@analogjs/platform';
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
@@ -13,13 +13,39 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: [
     analog({
+      static: true,
       content: {
         highlighter: 'prism',
       },
       prerender: {
-        routes: ['/blog', '/blog/2022-12-27-my-first-post'],
+        routes: [
+          '/',
+          '/blog',
+          {
+            contentDir: 'src/content/blog',
+            transform: (file: PrerenderContentFile) => {
+              const slug = file.attributes['slug'];
+              return `/blog/${slug}`;
+            },
+          },
+          '/about',
+          '/tags',
+          {
+            contentDir: 'src/content/blog',
+            transform: (file: PrerenderContentFile) => {
+              const tagNames = new Set<string>();
+              if (file.attributes['tags']) {
+                file.attributes['tags'].forEach((tag: string) => {
+                  tagNames.add(tag);
+                });
+              }
+              const slug = Array.from(tagNames)[0];
+              return `/tags/${slug}`;
+            },
+          },
+        ],
       },
-    }),
+    }), 
   ],
   test: {
     globals: true,
