@@ -22,7 +22,7 @@ export default defineConfig(({ mode }) => ({
           '/',
           '/blog',
           {
-            contentDir: 'src/content/blog',
+            contentDir: 'src/content',
             transform: (file: PrerenderContentFile) => {
               const slug = file.attributes['slug'];
               return `/blog/${slug}`;
@@ -31,7 +31,7 @@ export default defineConfig(({ mode }) => ({
           '/about',
           '/tags',
           {
-            contentDir: 'src/content/blog',
+            contentDir: 'src/content',
             transform: (file: PrerenderContentFile) => {
               const tagNames = new Set<string>();
               if (file.attributes['tags']) {
@@ -45,7 +45,7 @@ export default defineConfig(({ mode }) => ({
           },
         ],
       },
-    }), 
+    }),
   ],
   test: {
     globals: true,
