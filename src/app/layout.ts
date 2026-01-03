@@ -1,5 +1,7 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, afterNextRender } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+
+declare var docsearch: any;
 
 @Component({
   selector: 'app-layout',
@@ -12,6 +14,7 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
     <header>
       <div class="nav-wrap">
         <nav aria-label="Primary">
+          <div id="docsearch"></div>
           <a routerLink="/" routerLinkActive="active">Blog</a>
           <a routerLink="/tags" routerLinkActive="active">Tags</a>
           <a routerLink="/about" routerLinkActive="active">About</a>
@@ -138,6 +141,18 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
   `,
 })
 export class LayoutComponent {
+  constructor() {
+    afterNextRender(() => {
+      docsearch({
+        appId: '2XJACE5WR2',
+        apiKey: '46a06c9f83f755da664540969c8bf344',
+        indexName: 'thomascsdio',
+        container: '#docsearch',
+        debug: false,
+      });
+    });
+  }
+
   year = new Date().getFullYear();
   theme = signal<'light' | 'dark'>('light');
 
