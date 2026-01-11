@@ -16,6 +16,9 @@ export default defineConfig(({ mode }) => ({
       static: true,
       content: {
         highlighter: 'prism',
+        prismOptions: {
+          additionalLangs: ['csharp'],
+        },
       },
       prerender: {
         routes: [
