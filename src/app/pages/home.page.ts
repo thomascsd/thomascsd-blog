@@ -16,7 +16,7 @@ import PostAttributes from '../post-attributes';
       </section>
     </div>
     <div class="hero__content">
-      <h1 id="hero-title">簡約現代的技術部落格</h1>
+      <h1 id="hero-title">Thomas Blog</h1>
       <p class="muted">分享程式設計、工具與開發心得，保持持續學習。</p>
     </div>
 
