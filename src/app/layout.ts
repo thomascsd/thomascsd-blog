@@ -1,4 +1,5 @@
-import { Component, signal, afterNextRender } from '@angular/core';
+import { Component, signal, afterNextRender, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
 declare var docsearch: any;
@@ -141,15 +142,17 @@ declare var docsearch: any;
   `,
 })
 export class LayoutComponent {
-  constructor() {
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
     afterNextRender(() => {
-      docsearch({
-        appId: '2XJACE5WR2',
-        apiKey: '46a06c9f83f755da664540969c8bf344',
-        indexName: 'thomascsdio',
-        container: '#docsearch',
-        debug: false,
-      });
+      if (isPlatformBrowser(this.platformId) && typeof docsearch !== 'undefined') {
+        docsearch({
+          appId: '2XJACE5WR2',
+          apiKey: '46a06c9f83f755da664540969c8bf344',
+          indexName: 'thomascsdio',
+          container: '#docsearch',
+          debug: false,
+        });
+      }
     });
   }
 

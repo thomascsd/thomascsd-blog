@@ -1,4 +1,5 @@
-import { Component, inject, afterNextRender } from '@angular/core';
+import { Component, inject, afterNextRender, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs';
 import { LayoutComponent } from './layout';
@@ -17,16 +18,19 @@ declare var gtag: any;
 })
 export class App {
   private router = inject(Router);
+  private platformId = inject(PLATFORM_ID);
 
   constructor() {
     afterNextRender(() => {
-      this.router.events
-        .pipe(filter((event) => event instanceof NavigationEnd))
-        .subscribe((event: any) => {
-          gtag('event', 'page_view', {
-            page_path: event.urlAfterRedirects,
+      if (isPlatformBrowser(this.platformId) && typeof gtag !== 'undefined') {
+        this.router.events
+          .pipe(filter((event) => event instanceof NavigationEnd))
+          .subscribe((event: any) => {
+            gtag('event', 'page_view', {
+              page_path: event.urlAfterRedirects,
+            });
           });
-        });
+      }
     });
   }
 }
