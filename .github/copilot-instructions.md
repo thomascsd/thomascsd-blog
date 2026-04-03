@@ -51,3 +51,7 @@
   - Vitest 官方文件: https://vitest.dev/guide/
 
 - 建立 Angular component 時，html 模板與 css 樣式請盡量內聯（inline），除非內容過長或需要特殊處理，才使用外部檔案。
+
+- 執行前先建立執行計劃，並且變成todo-list
+- 執行完step後，git commit step的結果
+- 每個step都要有commit message
