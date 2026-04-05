@@ -1,12 +1,12 @@
 ---
 title: Angular HttpResource
-bgImageUrl: /images/35/35-00.png
-description: Angular HttpResource
+bgImageUrl: /images/35/35-00.jpg
+description: Angular 在19之後推出的新功能，基於 Signal 的新功能：`httpResource`，它將原本的 `HttpClient` 進行了封裝，並內建了三種核心狀態：`isLoading`、`hasValue` 與 `error`，之前版本需要另外實作的功能，目前已成為內建標準
 slug: 2026-03-29-angular-Httpresource
 tags: ['Angular']
 ---
 
-Angular 在19之後推出的新功能，將 `HttpClient` 使用 Signal 進行包裝，並且內建3種狀態：`isLoading`、`hasValue`、`error`，之前版本需要另外實作的功能，目前已是內建了，所以記錄一下到目前為止的心得。
+Angular 在19之後推出的新功能，基於 Signal 的新功能：`httpResource`，它將原本的 `HttpClient` 進行了封裝，並內建了三種核心狀態：`isLoading`、`hasValue` 與 `error`，之前版本需要另外實作的功能，目前已成為內建標準，所以記錄一下到目前為止的使用心得。
 
 ## HTTP GET
 
