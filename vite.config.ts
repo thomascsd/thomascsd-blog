@@ -24,6 +24,7 @@ export default defineConfig(({ mode }) => ({
         routes: [
           '/',
           '/blog',
+          '/api/rss.xml',
           {
             contentDir: 'src/content',
             transform: (file: PrerenderContentFile) => {
