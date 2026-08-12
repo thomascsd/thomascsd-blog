@@ -2,6 +2,7 @@
 
 import { defineConfig } from 'vite';
 import analog, { type PrerenderContentFile } from '@analogjs/platform';
+import { getPrerenderRoutes } from './scripts/generate-seo-assets.mjs';
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
@@ -21,7 +22,7 @@ export default defineConfig(({ mode }) => ({
         },
       },
       prerender: {
-        routes: [
+        routes: async () => [
           '/',
           '/blog',
           '/api/rss.xml',
@@ -34,19 +35,7 @@ export default defineConfig(({ mode }) => ({
           },
           '/about',
           '/tags',
-          {
-            contentDir: 'src/content',
-            transform: (file: PrerenderContentFile) => {
-              const tagNames = new Set<string>();
-              if (file.attributes['tags']) {
-                file.attributes['tags'].forEach((tag: string) => {
-                  tagNames.add(tag);
-                });
-              }
-              const slug = Array.from(tagNames)[0];
-              return `/tags/${slug}`;
-            },
-          },
+          ...(await getPrerenderRoutes()),
         ],
       },
     }),

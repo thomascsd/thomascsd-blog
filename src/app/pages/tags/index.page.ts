@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { injectContentFiles } from '@analogjs/content';
 import PostAttributes from '../../post-attributes';
+import { SeoService } from '../../seo/seo.service';
+import { formatTag } from '../../seo/seo-utils';
 
 @Component({
   selector: 'app-tags-index',
@@ -60,7 +62,16 @@ import PostAttributes from '../../post-attributes';
   `
 })
 export default class TagsIndexPage {
+  private readonly seo = inject(SeoService);
   readonly posts = injectContentFiles<PostAttributes>();
+
+  constructor() {
+    this.seo.update({
+      title: 'Tags｜Thomas Blog',
+      description: '瀏覽 Thomas Blog 的文章標籤，依主題探索 Angular、TypeScript、工具與 Web 開發內容。',
+      path: '/tags',
+    });
+  }
 
   get tags() {
     const tagCounts = new Map<string, number>();
@@ -79,6 +90,6 @@ export default class TagsIndexPage {
   }
 
   formatTag(tag: string): string {
-    return tag.charAt(0).toUpperCase() + tag.slice(1).replace(/-/g, ' ');
+    return formatTag(tag);
   }
 }

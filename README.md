@@ -16,7 +16,13 @@ Run `npm run build` to build the client/server project. The client build artifac
 
 ## Test
 
-Run `npm run test` to run unit tests with [Vitest](https://vitest.dev).
+Run `npm test -- --run` to run unit tests with [Vitest](https://vitest.dev).
+
+## SEO build verification
+
+`npm run build` first generates `public/robots.txt` and `public/sitemap.xml` from the Markdown front matter, then creates the Analog static build. After a build, run `npm run verify:seo` to inspect the actual `dist/analog/public` output for prerendered metadata, canonical URLs, BlogPosting JSON-LD, robots, and sitemap invariants.
+
+The SEO checks are local build-output checks only; deployment and production-site HTTP validation are intentionally outside this repository workflow. The RSS feed remains available at `/api/rss.xml` and emits trailing-slash article URLs.
 
 ## Community
 

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://thomascsd.github.io/sitemap.xml

@@ -1,49 +1,31 @@
 import { defineEventHandler, setHeader } from 'h3';
-import * as fs from 'fs';
-import * as path from 'path';
+import * as fs from 'node:fs';
+import * as path from 'node:path';
 import fm from 'front-matter';
-import { Feed } from 'feed';
 
-export default defineEventHandler(async (event) => {
-  const feed = new Feed({
-    title: "Thomas Blog",
-    description: "Thomas Blog RSS Feed",
-    id: "https://thomascsd.github.io/",
-    link: "https://thomascsd.github.io/",
-    language: "zh-TW",
-    copyright: "All rights reserved, Thomas",
-    updated: new Date(),
-    generator: "Feed for Node.js",
-  });
+const SITE_URL = 'https://thomascsd.github.io';
+const escapeXml = (value: string) => value
+  .replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;')
+  .replaceAll('"', '&quot;').replaceAll("'", '&apos;');
 
+export default defineEventHandler((event) => {
   const contentDir = path.resolve(process.cwd(), 'src/content');
+  const items: string[] = [];
   if (fs.existsSync(contentDir)) {
-    const files = fs.readdirSync(contentDir).filter(file => file.endsWith('.md'));
-
+    const files = fs.readdirSync(contentDir).filter((file) => file.endsWith('.md')).sort().reverse();
     for (const file of files) {
-      const filePath = path.join(contentDir, file);
-      const fileContent = fs.readFileSync(filePath, 'utf-8');
-      const parsed = fm<any>(fileContent);
+      const parsed = fm<Record<string, string>>(fs.readFileSync(path.join(contentDir, file), 'utf8'));
       const attrs = parsed.attributes;
-
-      const slug = attrs.slug || file.replace('.md', '');
-      const url = `https://thomascsd.github.io/blog/${slug}`;
-
-      // Extract date from filename YYYY-MM-DD
-      const dateMatch = file.match(/^(\d{4}-\d{2}-\d{2})/);
-      const date = dateMatch ? new Date(dateMatch[1]) : new Date();
-
-      feed.addItem({
-        title: attrs.title || file,
-        id: url,
-        link: url,
-        description: attrs.description || '',
-        content: parsed.body,
-        date: date,
-      });
+      const slug = String(attrs.slug || file.replace('.md', '')).replace(/\/+$/, '');
+      const url = `${SITE_URL}/blog/${slug}/`;
+      const date = attrs.datePublished || file.match(/^(\d{4}-\d{2}-\d{2})/)?.[1] || '';
+      items.push(`    <item>\n      <title>${escapeXml(attrs.title || file)}</title>\n      <link>${url}</link>\n      <guid isPermaLink="true">${url}</guid>\n      <description>${escapeXml(attrs.description || '')}</description>${date ? `\n      <pubDate>${new Date(`${date}T00:00:00Z`).toUTCString()}</pubDate>` : ''}\n    </item>`);
     }
   }
-
-  setHeader(event, 'Content-Type', 'text/xml');
-  return feed.rss2();
+  setHeader(event, 'Content-Type', 'application/rss+xml; charset=utf-8');
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0"><channel>\n  <title>Thomas Blog</title>\n  <description>Thomas Blog RSS Feed</description>\n  <link>${SITE_URL}/</link>\n  <language>zh-TW</language>\n${items.join('\n')}\n</channel></rss>\n`;
 });
+
+void defineEventHandler;
+void setHeader;
+void fm;

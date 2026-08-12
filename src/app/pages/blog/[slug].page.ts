@@ -1,8 +1,12 @@
-import { Component } from '@angular/core';
-import { AsyncPipe } from '@angular/common';
+import { DOCUMENT, AsyncPipe } from '@angular/common';
+import { Component, inject } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { injectContent, MarkdownComponent } from '@analogjs/content';
 
 import PostAttributes from '../../post-attributes';
+import { SeoService } from '../../seo/seo.service';
+import { buildBlogPostingJsonLd } from '../../seo/structured-data';
+import { getDescription, getPostDate, getPostImage } from '../../seo/seo-utils';
 
 @Component({
   selector: 'app-blog-post',
@@ -77,6 +81,36 @@ import PostAttributes from '../../post-attributes';
 })
 export default class BlogPost {
   readonly post$ = injectContent<PostAttributes>('slug');
+  private readonly seo = inject(SeoService);
+  private readonly document = inject(DOCUMENT);
+
+  constructor() {
+    this.post$.pipe(takeUntilDestroyed()).subscribe((post) => {
+      const attributes = post.attributes;
+      const published = getPostDate(attributes);
+      const modified = attributes.dateModified?.trim() || published;
+      this.seo.update({
+        title: `${attributes.title}｜Thomas Blog`,
+        description: getDescription(attributes),
+        path: `/blog/${attributes.slug}`,
+        type: 'article',
+        image: getPostImage(attributes),
+        publishedTime: published || undefined,
+        modifiedTime: modified || undefined,
+        author: attributes.author || 'Thomas',
+      });
+      this.setStructuredData(buildBlogPostingJsonLd(attributes));
+    });
+  }
+
+  private setStructuredData(data: ReturnType<typeof buildBlogPostingJsonLd>): void {
+    this.document.head.querySelector('script[type="application/ld+json"][data-seo="blog-posting"]')?.remove();
+    const script = this.document.createElement('script');
+    script.type = 'application/ld+json';
+    script.setAttribute('data-seo', 'blog-posting');
+    script.textContent = JSON.stringify(data).replaceAll('<', '\\u003c');
+    this.document.head.appendChild(script);
+  }
 
   getDateFromSlug(slug: string): string {
     const m = slug.match(/^(\d{4})-(\d{2})-(\d{2})/);

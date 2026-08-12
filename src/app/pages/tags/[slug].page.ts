@@ -4,6 +4,8 @@ import { injectContentFiles } from '@analogjs/content';
 import { map } from 'rxjs/operators';
 import { AsyncPipe } from '@angular/common';
 import PostAttributes from '../../post-attributes';
+import { SeoService } from '../../seo/seo.service';
+import { formatTag } from '../../seo/seo-utils';
 
 @Component({
   selector: 'app-tag-detail',
@@ -119,11 +121,24 @@ import PostAttributes from '../../post-attributes';
 })
 export default class TagDetailPage {
   private readonly route = inject(ActivatedRoute);
+  private readonly seo = inject(SeoService);
   readonly allPosts = injectContentFiles<PostAttributes>();
   
   readonly tag$ = this.route.paramMap.pipe(
-    map(params => params.get('slug'))
+    map(params => params.get('slug')),
   );
+
+  constructor() {
+    this.tag$.subscribe((tag) => {
+      if (!tag) return;
+      const label = formatTag(tag);
+      this.seo.update({
+        title: `${label} 文章｜Thomas Blog`,
+        description: `瀏覽 Thomas Blog 的「${label}」標籤文章列表，探索相關技術筆記與開發心得。`,
+        path: `/tags/${tag}`,
+      });
+    });
+  }
 
   getPostsByTag(tag: string) {
     return this.allPosts
@@ -138,7 +153,7 @@ export default class TagDetailPage {
 
   formatTag(tag: string | null): string {
     if (!tag) return '';
-    return tag.charAt(0).toUpperCase() + tag.slice(1).replace(/-/g, ' ');
+    return tag ? formatTag(tag) : '';
   }
   
   getDateFromSlug(slug: string): string {

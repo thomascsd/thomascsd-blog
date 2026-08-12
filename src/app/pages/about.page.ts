@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { SeoService } from '../seo/seo.service';
 
 @Component({
   selector: 'app-about',
@@ -22,4 +23,14 @@ import { Component } from '@angular/core';
     article { line-height: 1.7; }
   `,
 })
-export default class AboutPage {}
+export default class AboutPage {
+  private readonly seo = inject(SeoService);
+
+  constructor() {
+    this.seo.update({
+      title: '關於 Thomas｜Thomas Blog',
+      description: '認識 Thomas，以及這個分享 Web 開發、工程效率與學習心得的技術部落格。',
+      path: '/about',
+    });
+  }
+}

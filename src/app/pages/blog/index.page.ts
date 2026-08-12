@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { injectContentFiles } from '@analogjs/content';
 
 import PostAttributes from '../../post-attributes';
+import { SeoService } from '../../seo/seo.service';
 
 @Component({
   selector: 'app-blog',
@@ -43,7 +44,16 @@ import PostAttributes from '../../post-attributes';
   `,
 })
 export default class Blog {
+  private readonly seo = inject(SeoService);
   readonly posts = injectContentFiles<PostAttributes>();
+
+  constructor() {
+    this.seo.update({
+      title: 'Blog 文章｜Thomas Blog',
+      description: '瀏覽 Thomas Blog 的全部技術文章與開發心得。',
+      path: '/blog',
+    });
+  }
 
   getDateFromSlug(slug: string): string {
     // 假設 slug 格式為 yyyy-mm-dd-xxxx
