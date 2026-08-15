@@ -86,7 +86,7 @@ export default class BlogPost {
 
   constructor() {
     this.post$.pipe(takeUntilDestroyed()).subscribe((post) => {
-      const attributes = post.attributes;
+      const attributes = post.attributes as PostAttributes;
       const published = getPostDate(attributes);
       const modified = attributes.dateModified?.trim() || published;
       this.seo.update({
