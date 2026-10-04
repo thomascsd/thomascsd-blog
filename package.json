@@ -10,8 +10,10 @@
     "dev": "vite",
     "start": "npm run dev",
     "build": "vite build",
+    "prebuild": "node scripts/generate-seo-assets.mjs",
     "watch": "vite build --watch",
     "test": "vitest",
+    "verify:seo": "node scripts/verify-seo.mjs",
     "preview": "node dist/analog/server/index.mjs",
     "deploy": "node ./deploy.mjs"
   },

@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { SeoService } from '../seo/seo.service';
+import { formatTag } from '../seo/seo-utils';
 import { NgOptimizedImage } from '@angular/common';
 import { injectContentFiles } from '@analogjs/content';
 import PostAttributes from '../post-attributes';
@@ -159,6 +161,8 @@ import PostAttributes from '../post-attributes';
   `,
 })
 export default class HomePage {
+  private readonly seo = inject(SeoService);
+
   readonly posts = injectContentFiles<PostAttributes>()
     .slice()
     .sort((a, b) => {
@@ -170,6 +174,14 @@ export default class HomePage {
       return bs[0].localeCompare(as[0]);
     });
 
+  constructor() {
+    this.seo.update({
+      title: 'Thomas Blog｜分享 Angular、TypeScript 與 Web 開發心得',
+      description: '分享 Angular、TypeScript、JavaScript、.NET、開發工具與軟體工程實務心得。',
+      path: '/',
+    });
+  }
+
   getDateFromSlug(slug: string): string {
     // 假設 slug 格式為 yyyy-mm-dd-xxxx
     const m = slug.match(/^(\d{4})-(\d{2})-(\d{2})/);
@@ -178,6 +190,6 @@ export default class HomePage {
   }
 
   formatTag(tag: string): string {
-    return tag.charAt(0).toUpperCase() + tag.slice(1).replace(/-/g, ' ');
+    return formatTag(tag);
   }
 }
