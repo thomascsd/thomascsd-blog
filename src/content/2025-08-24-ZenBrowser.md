@@ -1,7 +1,7 @@
 ---
 title: Zen Browser小小心得
 bgImageUrl: /images/33/33-00.png
-description: 最近瀏覽 daily.dev 上的文章時，偶然發現一款名為 Zen Browser 的瀏覽器。它不僅結合了其他瀏覽器的特色，更特別的是以 Firefox 為核心開發。身為 Firefox 的長期用戶，我立刻感到好奇並下載試用。隨著使用時間拉長，我越來越覺得它得心應手，甚至將其設為我的預設瀏覽器。因此
+description: 最近瀏覽 daily.dev 上的文章時，偶然發現一款名為 Zen Browser 的瀏覽器。它不僅結合了其他瀏覽器的特色，更特別的是以 Firefox 為核心開發。身為 Firefox 的長期用戶，我立刻感到好奇並下載試用。隨著使用時間拉長，我越來越覺得它得心應手，甚至將其設為我的預設瀏覽器。
 slug: 2025-08-24-zen-browser
 tags: []
 ---

@@ -1,7 +1,7 @@
 ---
 title: 使用 Analog.js 建立 Blog
 bgImageUrl: /images/36/36-0.jpg
-description: 選擇 Analog.js，主要是看中它的兩大核心特性：File-based Routing 與 Static Site Generation。對個人 Blog 來說，架構越單純俐落越好，因此開箱即用的 File-based Routing 非常合適；而在部署方面，我也希望如以往使用 `Scully.js` 時一樣，將網站預先打包為純靜態頁面，而 Analog.js 原生就對此提供極佳的支援
+description: 選擇 Analog.js，主要是看中它的兩大核心特性：File-based Routing 與 Static Site Generation。對個人 Blog 來說，架構越單純俐落越好，因此開箱即用的 File-based Routing 非常合適；而在部署方面，我也希望如以往使用 Scully.js 時一樣，將網站預先打包為純靜態頁面，而 Analog.js 原生就對此提供極佳的支援
 slug: 2026-09-26-analog-js-blog
 tags: ['Angular']
 ---
@@ -15,7 +15,7 @@ tags: ['Angular']
 建立專案非常簡單，參考官網的 [Getting Started](https://analogjs.org/docs/getting-started) 指引，執行下列指令即可：
 
 
-```
+```bash
 npm create analog@latest
 ```
 
@@ -24,30 +24,29 @@ npm create analog@latest
 <img class="img-responsive" loading="lazy" src="/images/36/36-1.png">
 
 
-接下來選擇`prism.js`來做為程式的著色器
+接下來選擇 `prism.js` 來做為程式的著色器
 
 <img class="img-responsive" loading="lazy" src="/images/36/36-2.png">
 
-完成後，基礎的 Blog骨架就建立就緒了。
+完成後，基礎的 Blog 骨架就建立就緒了。
 
 <img class="img-responsive" loading="lazy" src="/images/36/36-3.png">
 
 ## 架構
 
-Analog.js 採用 File-based Routing，所有的頁面組件都統一放置在 `src/app/pages` 目錄下。以文章詳情頁面為例，預設路由規則對應於 `/blog/`，其中 `[slug].page.ts` 負責解析路徑參數並呈現對應的文章內容：
+`Analog.js` 採用 File-based Routing，所有的頁面組件都統一放置在 `src/app/pages` 目錄下。以文章詳情頁面為例，預設路由規則對應於 `/blog/`，其中 `[slug].page.ts` 負責解析路徑參數並呈現對應的文章內容：
 
 <img class="img-responsive" loading="lazy" src="/images/36/36-4.png">
 
-```javascript
+```typescript
 import { Component } from '@angular/core';
 import { AsyncPipe } from '@angular/common';
 import { injectContent, MarkdownComponent } from '@analogjs/content';
-
 import PostAttributes from '../../post-attributes';
 
-@({mponent({
+@Component({
   selector: 'app-blog-post',
-  mports: [AsyncPipe, MarkdownComponent],
+  imports: [AsyncPipe, MarkdownComponent],
   template: `
     @if (post$ | async; as post) {
     <article>
@@ -62,24 +61,25 @@ import PostAttributes from '../../post-attributes';
     }
   `,
 })
-exportBlogPostdefault class   {
+export class BlogPostComponent {
   readonly post$ = injectContent<PostAttributes>('slug');
 }
 ```
 
 
-所有的 Markdown 文章都統一存放在 `src/content` 目錄中。我們可以在文章開頭使用 YAML Frontmatter 來定義自訂欄位，例如封面圖片 `bgImageUrl`：
+所有的 Markdown 文章都統一存放在 `src/content` 目錄中。我們可以在文章開頭使用 YAML Frontmatter 來定義自訂欄位，例如封面圖片 `bgImageUrl`，在 `[slug].page.ts` 中，就能直接透過 `post.attributes.bgImageUrl` 取得 Frontmatter 定義的值。
 
 
 ```yaml
 
 title: 使用 Analog.js 建立 Blog
 bgImageUrl: /images/36/36-00.jpg
-description: Angular 在19之後推出的新功能，基於 Signal 的新功能：`httpResource`，它將原本的 `HttpClient` 進行了封裝，並內建了三種核心狀態：`isLoading`、`hasValue` 與 `error`，之前版本需要另外實作的功能，目前已成為內建標準
+description: 選擇 Analog.js，主要是看中它的兩大核心特性：File-based Routing...
 slug: 2026-09-26-analog-js-blog
 tags: ['Angular']
 
 ```
+
 
 <img class="img-responsive" loading="lazy" src="/images/36/36-5.png">
 
@@ -127,7 +127,7 @@ export default defineConfig(({ mode }) => ({
 
 ```
 
-Analog.js 的核心設定位於 vite.config.ts 中，透過 Vite Plugin 的方式進行無縫整合。目前我的專案主要配置了兩項重點：指定語法著色器使用 Prism.js（並擴充 C# 語法支援），以及設定靜態輸出時要預先產生的路由。
+`Analog.js` 的核心設定位於 `vite.config.ts` 中，透過 Vite Plugin 的方式進行無縫整合。目前我的專案主要配置了兩項重點：指定語法著色器使用 Prism.js（並擴充 C# 語法支援），以及設定靜態輸出時要預先產生的路由。
 
 ## 使用AI
 

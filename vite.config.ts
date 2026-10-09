@@ -18,7 +18,7 @@ export default defineConfig(({ mode }) => ({
       content: {
         highlighter: 'prism',
         prismOptions: {
-          additionalLangs: ['csharp'],
+          additionalLangs: ['csharp', 'json', 'bash'],
         },
       },
       prerender: {

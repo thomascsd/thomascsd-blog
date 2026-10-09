@@ -1,7 +1,7 @@
 ---
 title: .NET 好用套件 - commandline
 bgImageUrl: /images/29/29-0.jpeg
-description: 在.NET Framework 的時候，沒有內建的 CLI 指令參數解析，再到.NET Core 時，雖然有個套件System.CommandLine，但覺得沒有很好使用，之前有發現一個套件 commandline，設定及讀取參考很簡單易用，寫篇心得文分享一下。 設定 ```csharp publi
+description: 在.NET Framework 的時候，沒有內建的 CLI 指令參數解析，再到.NET Core 時，雖然有個套件System.CommandLine，但覺得沒有很好使用，之前有發現一個套件 commandline，設定及讀取參考很簡單易用，寫篇心得文分享一下。 
 slug: 2023-12-29-turorial-of-commnad-line
 tags: []
 ---

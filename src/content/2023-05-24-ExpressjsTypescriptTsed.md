@@ -1,7 +1,7 @@
 ---
 title: 使用TypeScript建立Express.js-使用Ts.ED
 bgImageUrl: /images/27/27-0.jpg
-description: 之前有寫過一篇文章使用 TypeScript 建立 Express.js，介紹了 routing-controllers，可以將 `TypeScipt` 與 `Express.js`整合，並使用 Controller 的方式建立 `Express.js`，然而發現套件更新有點緩慢，最近在該專案的Gi
+description: 之前有寫過一篇文章使用 TypeScript 建立 Express.js，介紹了 routing-controllers，可以將 TypeScipt 與 Express.js 整合，並使用 Controller 的方式建立 Express.js，然而發現套件更新有點緩慢，在研究和測試後，覺得可以將程式轉換到 Ts.ED
 slug: 2023-05-24-expressjs-typescript-tsed
 tags: ["typescript", "javascript", "express"]
 ---
