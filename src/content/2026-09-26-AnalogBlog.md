@@ -1,17 +1,18 @@
 ---
 title: 使用 Analog.js 建立 Blog
-bgImageUrl: /images/36/36-00.jpg
-description: Angular 在19之後推出的新功能，基於 Signal 的新功能：`httpResource`，它將原本的 `HttpClient` 進行了封裝，並內建了三種核心狀態：`isLoading`、`hasValue` 與 `error`，之前版本需要另外實作的功能，目前已成為內建標準
+bgImageUrl: /images/36/36-0.jpg
+description: 選擇 Analog.js，主要是看中它的兩大核心特性：File-based Routing 與 Static Site Generation。對個人 Blog 來說，架構越單純俐落越好，因此開箱即用的 File-based Routing 非常合適；而在部署方面，我也希望如以往使用 `Scully.js` 時一樣，將網站預先打包為純靜態頁面，而 Analog.js 原生就對此提供極佳的支援
 slug: 2026-09-26-analog-js-blog
 tags: ['Angular']
 ---
 
-在先前的文章中，我曾介紹過如何使用 Scully.js 來建置自己的技術 Blog。然而沒想到自 2023 年起，Scully.js 突然停止了維護，導致它無法支援 Angular 15 之後的版本。我花了不少時間尋找替代方案，最終發現了專為 Angular 打造的 Meta-Framework —— **Analog.js**。這篇文章就來分享我將 Blog遷移到 Analog.js 的心得與架構設定。
+在先前的文章中，我曾介紹過如何使用 `Scully.js` 來建置自己的技術 Blog。然而沒想到自 2023 年起，`Scully.js` 突然停止了維護，導致它無法支援 Angular 15 之後的版本。我花了不少時間尋找替代方案，最終發現了專為 Angular 打造的 Meta-Framework —— **Analog.js**。這篇文章就來分享我將 Blog 遷移到 Analog.js 的心得。
 
 ## 建立 Blog 專案 
 
-我之所以選擇 Analog.js，主要是看中它的兩大核心特性：**File-based Routing（檔案系統路由）** 與 **Static Site Generation（SSG，靜態網站生成）**。 對個人 Blog來說，架構越單純俐落越好，因此開箱即用的 File-based Routing 非常合適；而在部署方面，我也希望如以往使用 Scully 時一樣，將網站預先打包為純靜態頁面，而 Analog.js 原生就對此提供極佳的支援。
- 建立專案非常簡單，參考官網的 [Getting Started](https://analogjs.org/docs/getting-started) 指引，執行下列指令即可：
+我之所以選擇 Analog.js，主要是看中它的兩大核心特性：**File-based Routing（檔案系統路由）** 與 **Static Site Generation（SSG，靜態網站生成）**。 對個人 Blog 來說，架構越單純俐落越好，因此開箱即用的 File-based Routing 非常合適；而在部署方面，我也希望如以往使用 `Scully.js` 時一樣，將網站預先打包為純靜態頁面，而 Analog.js 原生就對此提供極佳的支援。
+
+建立專案非常簡單，參考官網的 [Getting Started](https://analogjs.org/docs/getting-started) 指引，執行下列指令即可：
 
 
 ```
@@ -20,18 +21,22 @@ npm create analog@latest
 
 首先選擇 Blog 樣版
 
+<img class="img-responsive" loading="lazy" src="/images/36/36-1.png">
+
 
 接下來選擇`prism.js`來做為程式的著色器
 
+<img class="img-responsive" loading="lazy" src="/images/36/36-2.png">
 
 完成後，基礎的 Blog骨架就建立就緒了。
 
+<img class="img-responsive" loading="lazy" src="/images/36/36-3.png">
 
 ## 架構
 
 Analog.js 採用 File-based Routing，所有的頁面組件都統一放置在 `src/app/pages` 目錄下。以文章詳情頁面為例，預設路由規則對應於 `/blog/`，其中 `[slug].page.ts` 負責解析路徑參數並呈現對應的文章內容：
 
-
+<img class="img-responsive" loading="lazy" src="/images/36/36-4.png">
 
 ```javascript
 import { Component } from '@angular/core';
@@ -76,7 +81,7 @@ tags: ['Angular']
 
 ```
 
-
+<img class="img-responsive" loading="lazy" src="/images/36/36-5.png">
 
 
 文章內容則統一放在 `src/content` 目錄下。
