@@ -15,7 +15,7 @@
     "test": "vitest",
     "verify:seo": "node scripts/verify-seo.mjs",
     "preview": "node dist/analog/server/index.mjs",
-    "deploy": "node ./deploy.mjs"
+    "deploy": "node ./scripts/deploy.mjs"
   },
   "private": true,
   "dependencies": {
